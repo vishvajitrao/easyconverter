@@ -1,0 +1,100 @@
+
+{% extends 'base.html' %}
+{% block title %} Blog - Online Converter {% endblock %}
+{% block menu %}{% include 'menu.html' %} {% endblock %}
+{% block footer %}{% include 'footer.html' %} {% endblock %}
+{% load static %}
+{% block body %}
+{% block seo %}
+<meta name="title" content="Blog">
+<meta name="description"
+    content="The Converter Tool Hub is best online tool which provide lots of converter tool e.g. Char Counter, Word Counter, length Converter, Number Converter etc.">
+<meta name="keywords"
+    content="The Converter Tool Hub,Online Converter Tool, Best Converter,Pressure Converter,Length Converter,String Converter, HTML Converter,Time Converter">
+<meta name="robots" content="index, follow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="English">
+<meta name="author" content="The Converter Tool Hub">
+
+{% endblock %}
+<div class="container">
+    <div class="row">
+
+        <div class="col-xl-12">
+            <h2 class="text-center font-weight-bold mt-5"> - Online Converter User Guide - </h2>
+            <p class="text-center"><i>www.easyconverter.info</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xl-4 col-md-4 mt-3">
+            <div class="card hvr-float-shadow">
+                <img src="{% static 'loader/python.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary text-center shadow-none">Read More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-md-4 mt-3">
+            <div class="card hvr-float-shadow">
+                <img src="{% static 'loader/python.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary text-center shadow-none">Read More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-md-4 mt-3">
+            <div class="card hvr-float-shadow">
+                <img src="{% static 'loader/python.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary text-center shadow-none">Read More</a>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <div class="row">
+
+        <div class="offset-xl-3 col-xl-6 my-3">
+       
+              
+               <div class="pagination d-flex justify-content-center">
+                <span class="step-links">
+                    {% if page_obj.has_previous %}
+                        <a href="?page=1">&laquo; first</a>
+                        <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+                    {% endif %}
+            
+                    <span class="current">
+                        Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                    </span>
+            
+                    {% if page_obj.has_next %}
+                        <a href="?page={{ page_obj.next_page_number }}">next</a>
+                        <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+                    {% endif %}
+                </span>
+            </div>
+          
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+{% endblock %}

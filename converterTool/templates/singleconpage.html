@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% block title %} Best tool to convert {{data.convertFrom}} To {{data.convertTo}} - Easy Converter {% endblock %}
+{% block menu %}{% include 'menu.html' %} {% endblock %}
+{% block footer %}{% include 'footer.html' %} {% endblock %}
+{% load static %}
+{% block seo %}
+<meta name="description" content="{{data.description}}">
+<meta name="keywords" content="{{data.keywords}}">
+<meta name="robots" content="index, follow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="English">
+<meta name="author" content="The Converter Tool Hub">
+{% endblock %}
+{% block body %}
+<img src="{% static 'loader/ct.png' %}" alt="">
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-xl-12 text-center">
+            <a href="{% url 'Index2' %}" class="font-weight-bold">Home</a> <i class="fas fa-arrow-circle-right"></i> <a
+                href="{% url 'Converter' data.category.url %}" class="font-weight-bold">{{data.category.name}}</a> <i
+                class="fas fa-arrow-circle-right"></i>
+            <p class="font-weight-bold d-inline"> {{data.convertFrom}} To {{data.convertTo}} Conversion</p>
+            <hr>
+            <h2 class="text-center">{{data.convertFrom}} To {{data.convertTo}} Conversion.</h2>
+            <p class="text-center">This Tool Will Help you to convert {{data.convertFrom}} To {{data.convertTo}} with
+                the help of formula and appropriate example.</p>
+        </div>
+
+        <div class="col-xl-6 col-md-6">
+            <div class="form-group m-3">
+                <label for="exampleFormControlTextarea1" class="font-weight-bold">Write {{data.category.name }} in
+                    {{data.convertFrom}}.</label>
+                <input class="form-control shadow-none border border-dark" id="data"
+                    placeholder="{{data.category.name }} in {{data.convertFrom}}" spellcheck="false"
+                    type="number"></input>
+                <input type="hidden" name="" id="hiddenValue" value="{{data.btn}}">
+                <input type="hidden" name="" id="convertTo" value="{{data.convertTo}}">
+                <input type="hidden" name="" id="convertFrom" value="{{data.convertFrom}}">
+
+            </div>
+
+            </script>
+
+            <center>
+                <button id="btn" class="btn btn-success shadow-none" onclick="converter()">Convert</button>
+
+                <button id="clear" class="btn btn-danger shadow-none">Clear</button>
+                
+                <button id="btn" class="btn btn-info shadow-none" data-clipboard-target="#results">Copy</button>
+                <a href="{% url 'converterTool' data.category.name|lower data.viceVerca %}"
+                class="btn btn-dark shadow-none my-3"
+                title="{{data.convertTo}} To {{data.convertFrom}}">Swap
+                <i class="fas fa-arrow-circle-right"></i>
+            </a>
+                
+            </center>
+            <textarea class="form-control shadow-none border border-dark my-2" id="results" rows="3" name="wordType"
+                placeholder="Output in {{data.convertTo}}" spellcheck="false" style="resize:none;"></textarea>
+            {{viceVerca}}
+           
+
+            <h4 class="text-center my-2">Conversion Table</h4>
+
+            <table class="table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">S.No.</th>
+                    <th scope="col">Convert From mile/hour</th>
+                    <th scope="col">Convert To foot/second</th>
+                  </tr>
+                </thead>
+                <tbody>
+                 {% for i in values %}
+                 <tr>
+                    <th scope="row">{{i}}</th>
+                    <td class="text-center">{{i}}</td>
+                    
+                    <td>{{i}} *{{ 1.4666666667 }}</td>
+                   
+                  </tr>
+                {% endfor %}
+                </tbody>
+              </table>
+              <div class="my-2 rounded p-2">
+                {{data.content | safe}}
+
+            </div>
+
+        </div>
+        <div class="col-xl-6 col-md-6">
+            <h3 class="alert text-center alert-info">Advertisement</h3>
+            <p class="alert text-center alert-info font-weight-bold">Convert {{data.convertFrom}} To Others</p>
+
+            {% for side in sidebar %}
+            <div class="col-xl-10">
+
+                <a href="{% url 'converterTool' side.category.name|lower side.url %}">{{side.convertFrom}} To
+                    {{side.convertTo}}</a><br>
+
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+</div>
+
+
+
+{{data.javascript | safe}}
+
+
+{% endblock %}

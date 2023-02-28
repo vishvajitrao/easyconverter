@@ -1,0 +1,70 @@
+
+
+{% extends 'base.html' %}
+{% block title %} Online Capitalize case Converter - Easy Converter {% endblock %}
+{% block menu %}{% include 'menu.html' %} {% endblock %}
+{% block footer %}{% include 'footer.html' %} {% endblock %}
+{% block seo %}
+<meta name="title" content="Online Title Case Converter - Easy Converter">
+<meta name="description" content="Our online capitalize case converter tool allow you to convert your words in capitaize.">
+<meta name="keywords" content="Easy Converter, online capitalize case converter, free capitaize converter">
+<meta name="robots" content="index, follow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="English">
+{% endblock %}
+{% block body %}
+<div class="container-fluid mt-5">
+    <div class="col-xl-12 text-center">
+        <a href="{% url 'Index2' %}" class="font-weight-bold text-center">Home</a> <i
+            class="fas fa-arrow-circle-right"></i><a href="{% url 'stringConverter' %}"
+            class="font-weight-bold"> All String Tools </a><i class="fas fa-arrow-circle-right"></i> 
+        <p class="font-weight-bold d-inline">Capitalize the First Letter of a String</p>
+
+    </div>
+    <hr>
+</div>
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col-xl-12 text-center">
+            <h1 class="text-center">Capitalize the First Letter of a String</h1>
+            <p class="text-center">If you have bulk string, Then this tool will help you to capitalize the first letter of a string.</p>
+        </div>
+        <div class="col-xl-8 offset-xl-2 col-md-8 offset-md-2">
+            <div class="form-group m-3">
+                <label for="exampleFormControlTextarea1" class="font-weight-bold">Type Your Character in Text Area</label>
+                <textarea class="form-control shadow-none border border-dark" id="exampleFormControlTextarea1" rows="8" name="wordType" placeholder="Type/Paste your characters here"></textarea>
+              </div>
+              <center>
+                <button id="btn" class="btn btn-success shadow-none mb-5" onclick="Capitalize()">Capitalize</button>
+                <button id="btn" class="btn btn-info shadow-none mb-5" data-clipboard-target="#exampleFormControlTextarea1">Copy To Clipboard</button>
+                <button id="clear" class="btn btn-danger shadow-none mb-5" onclick="Clear()">Clear</button>
+            </center>
+              <div class="content">
+                <h2>What is capitalize case?</h2>
+                <p><b>Ans:- </b>In capitalize case, Only the first character of the string in upper case and rest of the strings ( characters ) are in lower case.</p>
+                <hr>
+                <h2>What is online capitalize converter tool?</h2>
+                <p><b>Ans:- </b>Our capitalize converter tool is completely free tool that let you to convert your bulk characters or words in capitalize case, Capitalize case means only first character of the string or words in upper case and rest of the string in lower case.
+                    <br>
+                    You can see following example for better understanding.
+                    </p>
+                <hr>
+                <b>Example 1:</b><br>
+                <p>Easy Converter <i class="fas fa-arrow-circle-right"></i> Easy Converter</p>
+                <b>Example 1:</b><br>
+                <p>Easy Converter <i class="fas fa-arrow-circle-right"></i> Easy Converter</p>
+                
+                <h2>Are this tool is free?</h2>
+                <p><b>Ans:- </b><b>Yes</b>, Our online lower case to upper case converter is completely free. You don't need to pay for using this.</p>
+            </div>
+        </div>
+
+        
+
+    </div>
+</div>
+
+
+
+
+{% endblock %}

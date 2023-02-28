@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% block title %} Best tool to convert Rankine To Fahrenheit. {% endblock %}
+{% block menu %}{% include 'menu.html' %} {% endblock %}
+{% block footer %}{% include 'footer.html' %} {% endblock %}
+{% block body %}
+
+<div class="container-fluid mt-5">
+    <div class="col-xl-12 text-center">
+        <a href="{% url 'Index2' %}" class="font-weight-bold text-center">Home</a> <i
+            class="fas fa-arrow-circle-right"></i><a href="{% url 'tempConverter' %}" class="font-weight-bold">Temprature Converter </a><i
+            class="fas fa-arrow-circle-right"></i>
+        <p class="font-weight-bold d-inline">Rankine To Fahrenheit Converter Tool </p>
+        
+    </div>
+    <hr>
+
+</div>
+
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col-xl-12 text-center">
+            <h1 class="text-center">Rankine To Fahrenheit Converter.</h1>
+            <p class="text-center">This Tool Will Help you to convert degree Rankine To degree Celsius.</p>
+        </div>
+        {% block left_adsense %} {% include 'left_adsense.html' %} {% endblock left_adsense %}
+        <div class="col-xl-4">
+            <div class="form-group m-3">
+                <label for="exampleFormControlTextarea1" class="font-weight-bold">Write Degree in Rankine (°R).</label>
+                <input class="form-control shadow-none border border-dark" id="data"
+                    placeholder="Write Degree in Rankine" spellcheck="false"></input>
+            </div>
+
+            <center class="mb-5">
+                <button id="btn" class="btn btn-success shadow-none ranktofah">Convert</button>
+
+                <button id="clear" class="btn btn-danger shadow-none">Clear</button>
+                <button id="clear" class="btn btn-success shadow-none" onclick="Reload()">Refresh</button>
+                <button id="btn" class="btn btn-info shadow-none" data-clipboard-target="#results">Copy To
+                    Clipboard</button>
+            </center>
+            
+            <textarea class="form-control shadow-none border border-dark mb-2" id="results" rows="3" name="wordType"
+            placeholder="Output in Fahrenheit (°F)" spellcheck="false" style="resize:none;"></textarea>
+
+      
+        <a href="{% url 'fahtoRank' %}" class="btn btn-dark shadow-none my-3" title="Fahrenheit To Rankine Converter">Fahrenheit To Rankine Converter ></a>
+        </div>
+
+        {% block right_adsense %} {% include 'right_adsense.html' %} {% endblock right_adsense %}
+        <div class="col-xl-12">
+            <div class="col-xl-6 offset-xl-3 mt-4">
+                <div class="my-5 rounded p-2" style="border: 2px solid #343a40;">
+                    <h4 class="text-center">Formula</h4>
+                    <h2 class="text-center" style="font-size: 20px;">How to convert Rankine To Fahrenheit</h2>
+                    <p>0°R is equal to the -457.67 degree Fahrenheit</p>
+                    <h3>0°R = -457.67°F</h3>
+                    <p>The temperature T in degrees Fahrenheit (°F) is equal to the temperature T in degrees Rankine minus 457.67:</p>
+                    <h3>T<sub>(°F) </sub>= ( T<sub>(°R)</sub> - 457.67 )</h3>
+                    <h3 class="mt-5">Example</h3>
+                    <p>Convert 200 degrees Rankine to Fahrenheit degrees.</p>
+                    <h3>T<sub>(°F) </sub>=  ( 200<sub>(°R)</sub> - 457.67 ) = -162.04 °C
+                    </h3>
+
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+</div>
+{% endblock %}

@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% block title %} Online Temprature Converter Tool - Easy Converter {% endblock %}
+{% block menu %}{% include 'menu.html' %} {% endblock %}
+{% block footer %}{% include 'footer.html' %} {% endblock %}
+{% load static %}
+{% block seo %}
+<meta name="description" content="{{data.description}}">
+<meta name="keywords" content="{{data.keywords}}">
+{% endblock %}
+{% block body %}
+
+<div class="container mt-5">
+    <div class="col-xl-12 text-center">
+        <a href="{% url 'Index2' %}" class="font-weight-bold text-center">Home</a> <i
+            class="fas fa-arrow-circle-right"></i>
+        <p class="font-weight-bold d-inline">Online Temprature Converter Tool </p>
+        
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-xl-12 text-center m2-5">
+            <h3 class="">Online Temprature Converter Tool</h3>
+            <p class="text-center">All the temprature converter tools on one place.</p>
+        </div>
+    </div>
+</div>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="/celsius-to-fahrenheit-online-converter">
+                <p class="border border-dark p-3 rounded">Celsius to Fahrenheit</p>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="/celsius-to-kelvin-online-converter">
+                <p class="border border-dark p-3 rounded">Celsius to Kelvin</p>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="/celsius-to-rankine-online-converter">
+                <p class="border border-dark p-3 rounded">Celsius to Rankine</p>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="/fahrenheit-to-kelvin-online-converter">
+                <p class="border border-dark p-3 rounded">Fahrenheit to Kelvin</p>
+            </a>
+        </div>
+
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="/fahrenheit-to-rankine-online-converter">
+                <p class="border border-dark p-3 rounded">Fahrenheit to Rankine</p>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="/fahrenheit-to-celsius-online-converter">
+                <p class="border border-dark p-3 rounded">Fahrenheit to Celsius</p>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="/rankine-to-celsius-online-converter">
+                <p class="border border-dark p-3 rounded">Rankine to Celsius</p>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="/rankine-to-kelvin-online-converter">
+                <p class="border border-dark p-3 rounded">Rankine to Kelvin</p>
+            </a>
+        </div>
+
+
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="/rankine-to-fahrenheit-online-converter">
+                <p class="border border-dark p-3 rounded">Rankine to Fahrenheit</p>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="/kelvin-to-rankine-online-converter">
+                <p class="border border-dark p-3 rounded">Kelvin to Rankine</p>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="/kelvin-to-celsius-online-converter">
+                <p class="border border-dark p-3 rounded">Kelvin to Celsius</p>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="/kelvin-to-fahrenheit-online--converter">
+                <p class="border border-dark p-3 rounded">Kelvin to Fahrenheit</p>
+            </a>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

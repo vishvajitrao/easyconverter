@@ -1,0 +1,48 @@
+
+
+{% extends 'base.html' %}
+{% block title %} Hexadecimal To Octal Online Converter Tool - Online Converter{% endblock %}
+{% block menu %}{% include 'menu.html' %} {% endblock %}
+{% block footer %}{% include 'footer.html' %} {% endblock %}
+{% block body %}
+<div class="container-fluid mt-5">
+    <div class="col-xl-12 text-center">
+        <a href="{% url 'Index2' %}" class="font-weight-bold text-center">Home</a> <i
+            class="fas fa-arrow-circle-right"></i><a href="{% url 'numberConverter' %}"
+            class="font-weight-bold"> All Numbers Tools </a><i class="fas fa-arrow-circle-right"></i> 
+        <p class="font-weight-bold d-inline">Hexadecimal To Octal Online Converter Tool</p>
+
+    </div>
+    <hr>
+</div>
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col-xl-12 text-center">
+            <h1 class="text-center">Hexadecimal To Octal Online Converter Tool</h1>
+            <p class="text-center">This tool will help you to convert Hexadecimal To octal Converter Tool.</p>
+        </div>
+        <div class="col-xl-8 offset-xl-2">
+            <div class="form-group m-3">
+                <label for="exampleFormControlTextarea1" class="font-weight-bold">Type Your Value in Hexadecimal ( Base 16 ) Representation.</label>
+                <textarea class="form-control shadow-none border border-dark" id="exampleFormControlTextarea1" rows="2" name="wordType" placeholder="Type Your Value in Octal Representation."></textarea>
+              </div>
+        </div>
+   <div class="col-xl-12">
+    <center>
+        <button id="btn" class="btn btn-success shadow-none mb-5" onclick="hextoOct()">Convert into Octal</button>
+        
+        <button id="clear" class="btn btn-danger shadow-none mb-5">Clear</button>
+    </center>
+    <strong class="text-center" id="result"></strong>
+   </div>
+
+        
+
+    </div>
+</div>
+
+
+
+
+
+{% endblock %}

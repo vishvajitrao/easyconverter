@@ -1,0 +1,814 @@
+
+{% extends 'base.html' %}
+{% block title %} Best Converter Tool of the World {% endblock %}
+{% block menu %}{% include 'menu.html' %} {% endblock %}
+{% block footer %}{% include 'footer.html' %} {% endblock %}
+{% load static %}
+{% block seo %}
+<meta name="title" content="The Converter Tool Hub - Best converter of The world ">
+<meta name="description"
+        content="The Converter Tool Hub is best online tool which provide lots of converter tool e.g. Char Counter, Word Counter, length Converter, Number Converter etc.">
+<meta name="keywords"
+        content="The Converter Tool Hub,Online Converter Tool, Best Converter,Pressure Converter,Length Converter,String Converter, HTML Converter,Time Converter">
+<meta name="robots" content="index, follow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="English">
+<meta name="author" content="The Converter Tool Hub">
+
+{% endblock %}
+{% block body %}
+<div class="container-fluid mb-5">
+        <div class="row">
+                <div class="col-xl-12 mt-5">
+                        <h2 class="text-center"> - Online Converter Tools - </h2>
+                        <p class="text-center"><i>www.easyconverter.info</i></p>
+                </div>
+                <div class="col-xl-3"></div>
+                <div class="col-xl-4">
+                        <input type="text" class="form-control p-4 shadow-none"
+                                placeholder="Type Here Like: Length converter">
+                </div>
+                <div class="col-xl-2">
+                        <button class="search p-2"><i class="fas fa-search mr-2"></i>Search</button>
+                </div>
+                <div class="col-xl-3"></div>
+        </div>
+        <div class="row" style="color: #083d8d;">
+
+
+                <div class="col-xl-4 col-md-4 mt-3">
+                        <p class="alert alert-success text-center font-weight-bold" style="color: #083d8d;">String
+                                Converter</p>
+                        <ul>
+                                <li><a href="{% url 'charCount' %}">
+                                                Characters counter
+                                        </a>
+                                </li>
+                                <li><a href="{% url 'Password' %}">
+                                                Password Generator
+                                        </a>
+                                </li>
+                                <li><a href="{% url 'wordCount' %}">
+                                                Words counter
+                                        </a>
+                                </li>
+                                <li><a href="{% url 'lowerCase' %}">
+                                                Upper To Lower
+                                        </a>
+                                </li>
+                                <li><a href="{% url 'upperCase' %}">
+                                                Lower To upper
+                                        </a>
+                                </li>
+                                <li><a href="{% url 'titleCase1' %}">
+                                                Title Case Converer
+                                        </a>
+                                </li>
+                                <li><a href="{% url 'Capitalize' %}">
+                                                Capitalize Converter
+                                        </a>
+                                </li>
+                                <li><a href="{% url 'stringReverse' %}">
+                                                String Reverse
+                                        </a>
+                                </li>
+                                <li><a href="{% url 'wordsReverse' %}">
+                                                Words Reverse
+                                        </a>
+                                </li>
+                                <li><a href="{% url 'stringtoBin' %}">
+                                                String To Binary Converter
+                                        </a>
+                                </li>
+                                <li><a href="{% url 'bintoString' %}">
+                                                Binary To String Converter
+                                        </a>
+                                </li>
+                                <li><a href="{% url 'stringtoHex' %}">
+                                                String To Hex Converter
+                                        </a>
+                                </li>
+                                <li><a href="{% url 'hextoString' %}">
+                                                Hex To String Converter
+                                        </a>
+                                </li>
+                                <li><a href="{% url 'base64Encode' %}">
+                                                Base64 Encode
+                                        </a>
+                                </li>
+                                <li><a href="{% url 'base64Decode' %}">
+                                                Base64 Decode
+                                        </a>
+                                </li>
+                                <li><a href="{% url 'htmlEncode' %}">
+                                                HTML Encode
+                                        </a>
+                                </li>
+                                <li><a href="{% url 'htmlDecode' %}">
+                                                HTML Decode
+                                        </a>
+                                </li>
+                                <li><a href="{% url 'urlEncode' %}">
+                                                URL Encode
+                                        </a>
+                                </li>
+                                <li><a href="{% url 'urlDecode' %}">
+                                                URL Decode
+                                        </a>
+                                </li>
+                        </ul>
+                </div>
+                <div class="col-xl-4 col-md-4 mt-3">
+                        <p class="alert alert-success text-center font-weight-bold" style="color: #083d8d;">Number
+                                Converter</p>
+                        <ul>
+                                <li><a href="{% url 'bintoDec' %}">
+                                                Binary To Decimal
+                                        </a>
+                                </li>
+                                <li><a href="{% url 'bintoOct' %}">
+                                                Binary To Octal
+                                        </a>
+                                </li>
+                                <li><a href="{% url 'bintoHex' %}">
+                                                Binary To Hexadecimal
+                                        </a>
+                                </li>
+                                <li><a href="{% url 'octtoDec' %}">
+                                                Octal To Decimal
+                                        </a>
+                                </li>
+                                <li><a href="{% url 'octtoBin' %}">
+                                                Octal To Binary
+                                        </a>
+                                </li>
+                                <li><a href="{% url 'octtoHex' %}">
+                                                Octal To Hexadecimal
+                                        </a>
+                                </li>
+                                <li><a href="{% url 'hextoDec' %}">
+                                                Hexadecimal To Decimal
+                                        </a>
+                                </li>
+                                <li><a href="{% url 'hextoBin' %}">
+                                                Hexadecimal To Binary
+                                        </a>
+                                </li>
+                                <li><a href="{% url 'hextoOct' %}">
+                                                Hexadecimal To Octal
+                                        </a>
+                                </li>
+                                <li><a href="{% url 'dectoBin' %}">
+                                                Decimal To Binary
+                                        </a>
+                                </li>
+                                <li><a href="{% url 'dectoOct' %}">
+                                                Decimal To Octal
+                                        </a>
+                                </li>
+                                <li><a href="{% url 'dectoHex' %}">
+                                                Decimal To Hexadecimal
+                                        </a>
+                                </li>
+                        </ul>
+                </div>
+                <div class="col-xl-4 col-md-4 mt-3">
+                        <p class="alert alert-success text-center font-weight-bold" style="color: #083d8d;">Frequency
+                                Converter</p>
+                        <ul>
+                                <li><a href="{% url 'converterTool' 'frequency' 'hertz-to-khz-converter' %}"
+                                                title="Hertz (Hz) To kilohertz ( kHz )">Hertz (Hz) To kilohertz ( kHz
+                                                )</a></li>
+                                <li><a href="{% url 'converterTool' 'frequency' 'hertz-to-mhz-converter' %}"
+                                                title="Hertz (Hz) To Megahertz ( MHz )">Hertz (Hz) To Megahertz ( MHz
+                                                )</a></li>
+                                <li><a href="{% url 'converterTool' 'frequency' 'hertz-to-ghz-converter' %}"
+                                                title="Hertz (Hz) To Gigahertz ( GHz )">Hertz (Hz) To Gigahertz ( GHz
+                                                )</a></li>
+                                <li><a href="{% url 'converterTool' 'frequency' 'hertz-to-thz-converter' %}"
+                                                title="Hertz (Hz) To Terahertz ( THz )">Hertz (Hz) To Terahertz ( THz
+                                                )</a></li>
+                                <li><a href="{% url 'converterTool' 'frequency' 'khz-to-hz-converter' %}"
+                                                title="kilohertz ( kHz ) To Hertz (Hz)">kilohertz ( kHz ) To Hertz
+                                                (Hz)</a></li>
+                                <li><a href="{% url 'converterTool' 'frequency' 'khz-to-mhz-converter' %}"
+                                                title="kilohertz ( kHz ) To Megahertz ( MHz )">kilohertz ( kHz ) To
+                                                Megahertz ( MHz ) </a></li>
+                                <li><a href="{% url 'converterTool' 'frequency' 'khz-to-ghz-converter' %}"
+                                                title="kilohertz ( kHz ) To Gigahertz ( GHz )">kilohertz ( kHz ) To
+                                                Gigahertz ( GHz ) </a></li>
+                                <li><a href="{% url 'converterTool' 'frequency' 'khz-to-thz-converter' %}"
+                                                title="kilohertz ( kHz ) To Terahertz ( THz )">kilohertz ( kHz ) To
+                                                Terahertz ( THz ) </a></li>
+                                <li><a href="{% url 'converterTool' 'frequency' 'mhz-to-hz-converter' %}"
+                                                title="Megahertz ( MHz ) To Hertz (Hz)">Megahertz ( MHz ) To Hertz (Hz)
+                                        </a></li>
+                                <li><a href="{% url 'converterTool' 'frequency' 'mhz-to-khz-converter' %}"
+                                                title="Megahertz ( MHz ) To kilohertz ( kHz )">Megahertz ( MHz ) To
+                                                kilohertz ( kHz ) </a></li>
+                                <li><a href="{% url 'converterTool' 'frequency' 'mhz-to-ghz-converter' %}"
+                                                title="Megahertz ( MHz ) To Gigahertz ( GHz )">Megahertz ( MHz ) To
+                                                Gigahertz ( GHz )</a></li>
+                                <li><a href="{% url 'converterTool' 'frequency' 'hertz-to-thz-converter' %}"
+                                                title="Megahertz ( MHz ) To Terahertz ( THz )">Megahertz ( MHz ) To
+                                                Terahertz ( THz )</a></li>
+
+                                <li><a href="{% url 'converterTool' 'frequency' 'ghz-to-hz-converter' %}"
+                                                title="Gigahertz ( GHz ) To Hertz (Hz)">Gigahertz ( GHz ) To Hertz (Hz)
+                                        </a></li>
+                                <li><a href="{% url 'converterTool' 'frequency' 'ghz-to-khz-converter' %}"
+                                                title="Gigahertz ( GHz ) To kilohertz ( kHz )">Gigahertz ( GHz ) To
+                                                kilohertz ( kHz ) </a></li>
+                                <li><a href="{% url 'converterTool' 'frequency' 'ghz-to-mhz-converter' %}"
+                                                title="Gigahertz ( GHz ) To Megahertz ( MHz )">Gigahertz ( GHz ) To
+                                                Megahertz ( MHz )</a></li>
+                                <li><a href="{% url 'converterTool' 'frequency' 'ghz-to-thz-converter' %}#"
+                                                title="Gigahertz ( GHz ) To Terahertz ( THz )">Gigahertz ( GHz ) To
+                                                Terahertz ( THz )</a></li>
+
+                                <li><a href="{% url 'converterTool' 'frequency' 'thz-to-hz-converter' %}"
+                                                title="Terahertz ( THz ) To Hertz (Hz)">Terahertz ( THz ) To Hertz (Hz)
+                                        </a></li>
+                                <li><a href="{% url 'converterTool' 'frequency' 'thz-to-khz-converter' %}"
+                                                title="Terahertz ( THz ) To kilohertz ( kHz )">Terahertz ( THz ) To
+                                                kilohertz ( kHz ) </a></li>
+                                <li><a href="{% url 'converterTool' 'frequency' 'thz-to-mhz-converter' %}"
+                                                title="Terahertz ( THz ) To Megahertz ( MHz )">Terahertz ( THz ) To
+                                                Megahertz ( MHz )</a></li>
+                                <li><a href="{% url 'converterTool' 'frequency' 'thz-to-ghz-converter' %}"
+                                                title="Gigahertz ( GHz ) To Gigahertz ( GHz )">Terahertz ( THz ) To
+                                                Gigahertz ( GHz )</a></li>
+
+
+
+                        </ul>
+                </div>
+
+
+                <div class="col-xl-4 col-md-4 mt-5">
+                        <p class="alert alert-success text-center font-weight-bold" style="color: #083d8d;">Temprature
+                                Converter</p>
+                        <ul>
+                                <li><a href="{% url 'celtoFah' %}" title="Celsius To Fahrenheit">Celsius To
+                                                Fahrenheit</a></li>
+                                <li><a href="{% url 'celtoKel' %}" title="Celsius To Kelvin">Celsius To Kelvin</a></li>
+                                <li><a href="{% url 'celtoRank' %}" title="Celsius To Rankine">Celsius To Rankine</a>
+                                </li>
+                                <li><a href="{% url 'fahtoCel' %}" title="Fahrenheit To Celsius">Fahrenheit To
+                                                Celsius</a></li>
+                                <li><a href="{% url 'fahtoKel' %}" title="Fahrenheit To Kelvin">Fahrenheit To Kelvin</a>
+                                </li>
+                                <li><a href="{% url 'fahtoRank' %}" title="Fahrenheit To Rankine">Fahrenheit To
+                                                Rankine</a></li>
+                                <li><a href="{% url 'keltoCel' %}" title="Kelvin To Celsius">Kelvin To Celsius</a></li>
+                                <li><a href="{% url 'keltoFah' %}" title="Kelvin To Fahrenheit">Kelvin To Fahrenheit</a>
+                                </li>
+                                <li><a href="{% url 'keltoRank' %}" title="Kelvin To Rankine">Kelvin To Rankine</a></li>
+                                <li><a href="{% url 'ranktoCel' %}" title="Kelvin To Celsius">Rankine To Celsius</a>
+                                </li>
+                                <li><a href="{% url 'ranktoFah' %}" title="Rankine To Fahrenheit">Rankine To
+                                                Fahrenheit</a></li>
+                                <li><a href="{% url 'ranktoKel' %}" title="Rankine To Kelvin">Rankine To Kelvin</a></li>
+                        </ul>
+                        <p class="alert alert-success text-center mt-4 font-weight-bold" style="color: #083d8d;">
+                                Formatter Tool</p>
+                        <ul>
+                                <li><a href="{% url 'jsonFormat' %}" title="JSON Formatter">JSON Formatter</a></li>
+                                <li><a href="{% url 'htmlFormat' %}" title="HTML Formatter">HTML Formatter</a></li>
+                                <li><a href="{% url 'cssFormat' %}" title="CSS Formatter">CSS Formatter</a></li>
+                                <li><a href="{% url 'jsFormat' %}" title="JavaScript Formatter">JavaScript Formatter</a>
+                                </li>
+                                <li><a href="#" title="XML Formatter">XML Formatter</a></li>
+
+                        </ul>
+
+
+
+                </div>
+                <div class="col-xl-4 col-md-4 mt-5">
+                        <p class="alert alert-success text-center font-weight-bold" style="color: #083d8d;">Speed
+                                Converter</p>
+                        <ul>
+                                <li><a href="#" title="Miles To Kilometer">Miles per hour To Kilometer per hour</a></li>
+                                <li><a href="#" title="Miles To Meter">Miles per hour To Meter per second</a></li>
+                                <li><a href="#" title="Miles To Foot">Miles per hour To Foot per second</a></li>
+                                <li><a href="#" title="Miles To Knot">Miles per hour To Knot</a></li>
+
+                                <li><a href="#" title="Kilometer To Miles">Kilometer per hour To Miles per hour</a></li>
+                                <li><a href="#" title="Kilometer per hour To Meter">Kilometer per hour To Meter per
+                                                second</a></li>
+                                <li><a href="#" title="Kilometer per hour To Foot">Kilometer per hour To Foot per
+                                                second</a></li>
+                                <li><a href="#" title="Kilometer per hour To Knot">Kilometer per hour To Knot</a></li>
+
+                                <li><a href="#" title="Meter To Miles">Meter per second To Miles per hour</a></li>
+                                <li><a href="#" title="Meter per hour To Kilometer">Meter per second To Kilometer per
+                                                hour</a></li>
+                                <li><a href="#" title="Meter per hour To Foot">Meter per second To Foot per second</a>
+                                </li>
+                                <li><a href="#" title="Meter per hour To Knot">Meter per second To Knot</a></li>
+
+                                <li><a href="#" title="Foot To Miles">Foot per second To Miles per hour</a></li>
+                                <li><a href="#" title="Foot per hour To Kilometer">Foot per second To Kilometer per
+                                                hour</a></li>
+                                <li><a href="#" title="Foot To Meter">Foot per second To Meter per second</a></li>
+                                <li><a href="#" title="Foot To Knot">Foot per second To Knot</a></li>
+
+
+                        </ul>
+                        <div class="text-center converter mt-5">
+                                <a href="#" class="border border-dark p-2 mt-3 rounded">
+                                        More Converter
+                                </a>
+                        </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mt-5">
+                        <p class="alert alert-success text-center font-weight-bold" style="color: #083d8d;">Pressure
+                                Converter</p>
+                        <ul>
+                                <li><a href="{% url 'converterTool' 'pressure' 'bar-to-pascal-converter' %}"
+                                                title="Bar To Pascal">Bar To
+                                                Pascal</a></li>
+                                <li><a href="{% url 'converterTool' 'pressure' 'bar-to-torr-converter' %}"
+                                                title="Bar To Torr">Bar To
+                                                Torr</a></li>
+                                <li><a href="{% url 'converterTool' 'pressure' 'bar-to-standard-atmosphere-converter' %}"
+                                                title="Bar To Standard Atmoshere">Bar To Standard Atmoshere</a></li>
+                                <li><a href="{% url 'converterTool' 'pressure' 'bar-to-pound-force-converter' %}"
+                                                title="Bar To Standard Pound Force">Bar To Pound Force</a></li>
+
+                                <li><a href="{% url 'converterTool' 'pressure' 'pascal-to-bar-converter' %}"
+                                                title="Pascal To Bar">Pascal
+                                                To Bar</a></li>
+                                <li><a href="{% url 'converterTool' 'pressure' 'pascal-to-torr-converter' %}"
+                                                title="Pascal To Torr">Pascal To Torr</a></li>
+                                <li><a href="{% url 'converterTool' 'pressure' 'pascal-to-standard-atmosphere-converter' %}"
+                                                title="Pascal To Standard Atmoshere">Pascal To Standard Atmoshere</a>
+                                </li>
+                                <li><a href="{% url 'converterTool' 'pressure' 'bar-to-pound-force-converter' %}"
+                                                title="Pascal To Standard Pound Force">Pascal To Pound Force</a></li>
+
+                                <li><a href="{% url 'converterTool' 'pressure' 'torr-to-bar-converter' %}"
+                                                title="Torr To Bar">Torr To
+                                                Bar</a></li>
+                                <li><a href="{% url 'converterTool' 'pressure' 'torr-to-pascal-converter' %}"
+                                                title="Torr To Pascal">Torr
+                                                To Pascal</a></li>
+                                <li><a href="{% url 'converterTool' 'pressure' 'torr-to-standard-atmosphere-converter' %}"
+                                                title="Torr To Standard Atmoshere">Torr To Standard Atmoshere</a></li>
+                                <li><a href="{% url 'converterTool' 'pressure' 'torr-to-pound-force-converter' %}"
+                                                title="Torr To Standard Pound Force">Torr To Pound Force</a></li>
+
+                                <li><a href="{% url 'converterTool' 'pressure' 'standard-atmosphere-to-bar-converter' %}"
+                                                title="Standard Atmoshere To Bar">Standard Atmoshere To Bar</a></li>
+                                <li><a href="{% url 'converterTool' 'pressure' 'standard-atmosphere-to-pascal-converter' %}"
+                                                title="Standard Atmoshere To Pascal">Standard AtmoshereTo Pascal</a>
+                                </li>
+                                <li><a href="{% url 'converterTool' 'pressure' 'standard-atmosphere-to-torr-converter' %}"
+                                                title="Standard Atmoshere To Torr">Standard Atmoshere To Torr</a></li>
+                                <li><a href="{% url 'converterTool' 'pressure' 'standard-atmosphere-to-pond-force-converter' %}"
+                                                title="Standard Atmoshere To Standard Pound Force">Standard Atmoshere To
+                                                Pound Force</a></li>
+
+
+                        </ul>
+                        <div class="text-center converter mt-5">
+                                <a href="#" class="border border-dark p-2 mt-3 rounded">
+                                        More Converter
+                                </a>
+                        </div>
+                </div>
+
+
+                <div class="col-xl-4 col-md-4 mt-5">
+                        <p class="alert alert-success text-center  font-weight-bold" style="color: #083d8d;">Angle
+                                Converter</p>
+                        <ul>
+                                <li><a href="{% url 'converterTool' 'angle' 'degree-to-gradian-converter' %}"
+                                                title="Degree to Gradian">Degree to Gradian</a></li>
+                                <li><a href="{% url 'converterTool' 'angle' 'degree-to-milligradian-converter' %}"
+                                                title="Degree to Milligradian">Degree to Milligradian</a></li>
+                                <li><a href="{% url 'converterTool' 'angle' 'day-to-week-converter' %}"
+                                                title="Degree to Minute of Arc">Degree to Minute of Arc</a></li>
+                                <li><a href="{% url 'converterTool' 'angle' 'day-to-week-converter' %}"
+                                                title="Degree to Radian">Degree to
+                                                Radian</a></li>
+
+                                <li><a href="{% url 'converterTool' 'angle' 'day-to-week-converter' %}"
+                                                title="Degree to Second of arc">Degree to Second of arc</a></li>
+
+                                <li><a href="{% url 'converterTool' 'angle' 'day-to-week-converter' %}"
+                                                title="Gradian to Degree">Gradian
+                                                to Degree</a></li>
+                                <li><a href="{% url 'converterTool' 'angle' 'day-to-week-converter' %}"
+                                                title="Gradian to Milligradian">Gradian to Milligradian</a></li>
+                                <li><a href="{% url 'converterTool' 'angle' 'day-to-week-converter' %}"
+                                                title="Gradian to Minute of Arc">Gradian to Minute of Arc</a></li>
+                                <li><a href="{% url 'converterTool' 'angle' 'day-to-week-converter' %}"
+                                                title="Gradian to Radian">Gradian
+                                                to Radian</a></li>
+                                <li><a href="{% url 'converterTool' 'angle' 'day-to-week-converter' %}"
+                                                title="Gradian to Second of arc">Gradian to Second of arc</a></li>
+
+                                <li><a href="{% url 'converterTool' 'angle' 'day-to-week-converter' %}"
+                                                title="Milliradian to Degree">Milliradian to Degree</a></li>
+                                <li><a href="{% url 'converterTool' 'angle' 'day-to-week-converter' %}"
+                                                title="Milliradian to Gradian">Milliradian to Gradian</a></li>
+                                <li><a href="{% url 'converterTool' 'angle' 'day-to-week-converter' %}"
+                                                title="Milliradian to Minute of Arc">Milliradian to Minute of Arc</a>
+                                </li>
+                                <li><a href="{% url 'converterTool' 'angle' 'day-to-week-converter' %}"
+                                                title="Milliradian to Radian">Milliradian to Radian</a></li>
+                                <li><a href="{% url 'converterTool' 'angle' 'day-to-week-converter' %}"
+                                                title="Milliradian to Second of arc">Milliradian to Second of arc</a>
+                                </li>
+
+                                <li><a href="{% url 'converterTool' 'angle' 'day-to-week-converter' %}"
+                                                title="Radian to Degree">Radian to
+                                                Degree</a></li>
+                                <li><a href="{% url 'converterTool' 'angle' 'day-to-week-converter' %}"
+                                                title="Radian to Gradian">Radian
+                                                to Gradian</a></li>
+                                <li><a href="{% url 'converterTool' 'angle' 'day-to-week-converter' %}"
+                                                title="Radian to Minute of Arc">Radian to Minute of Arc</a></li>
+                                <li><a href="{% url 'converterTool' 'angle' 'day-to-week-converter' %}"
+                                                title="Radian to Milligradian">Radian to Milligradian</a></li>
+                                <li><a href="{% url 'converterTool' 'angle' 'day-to-week-converter' %}"
+                                                title="Radian to Second of arc">Radian to Second of arc</a></li>
+
+                        </ul>
+                        <div class="text-center converter mt-5">
+                                <a href="#" class="border border-dark p-2 mt-3 rounded">
+                                        More Converter
+                                </a>
+                        </div>
+                </div>
+
+                <div class="col-xl-4 col-md-4 mt-5">
+                        <p class="alert alert-success text-center  font-weight-bold" style="color: #083d8d;">Length
+                                Converter</p>
+                        <ul>
+                                <li><a href="{% url 'converterTool' 'length' 'kilometer-to-meter-converter' %}"
+                                                title="kilometer to Meter">kilometer to Meter</a></li>
+
+                                <li><a href="{% url 'converterTool' 'length' 'kilometer-to-centimeter-converter'%}"
+                                                title="Kilometer to Centimeter">Kilometer to Centimeter</a></li>
+
+                                <li><a href="{% url 'converterTool' 'length' 'kilometer-to-millimeter-converter' %}"
+                                                title="Kilometer to Millimeter">Kilometer to Millimeter</a></li>
+
+                                <li><a href="{% url 'converterTool' 'length' 'kilometer-to-micrometer' %}"
+                                                title="Kilometer to Micrometer">Kilometer to Micrometer</a></li>
+
+                                <li><a href="{% url 'converterTool' 'length' 'kilometer-to-nanometer-converter' %}"
+                                                title="Kilometer to Nanometer">Kilometer to Nanometer</a></li>
+
+                                <li><a href="{% url 'converterTool' 'length' 'kilometer-to-mile-converter' %}"
+                                                title="Kolometer to Mile">Kolometer to Mile</a></li>
+
+                                <li><a href="{% url 'converterTool' 'length' 'kilometer-to-yard-converter' %}"
+                                                title="Kilometer to Yard">Kilometer to Yard</a></li>
+
+                                <li><a href="{% url 'converterTool' 'length' 'kilometer-to-inch-convereter' %}"
+                                                title="Kilometer to Inch">Kilometer to Inch</a></li>
+
+                                <li><a href="{% url 'converterTool' 'length' 'kilometer-to-foot-convereter' %}"
+                                                title="Kilometer to Foot">Kilometer to Foot</a></li>
+
+                                <li><a href="{% url 'converterTool'  'length' 'kilometer-to-nautical-convereter' %}"
+                                                title="Kolometer to Nautical Mile">Kolometer to Nautical Mile</a></li>
+
+                                <li><a href="{% url 'converterTool' 'length' 'meter-to-kilometer-convereter' %}"
+                                                title="Meter to Kilometer">Meter to Kilometer</a></li>
+
+                                <li><a href="{% url 'converterTool' 'length' 'meter-to-centimeter-convereter' %}"
+                                                title="Meter to Centimeter">Meter to Centimeter</a></li>
+
+                                <li><a href="{% url 'converterTool' 'length' 'meter-to-millimeter-convereter' %}"
+                                                title="Meter to Millimeter">Meter to Millimeter</a></li>
+
+                                <li><a href="{% url 'converterTool' 'length' 'meter-to-micrometer-convereter' %}"
+                                                title="Meter to Micrometer">Meter to Micrometer</a></li>
+
+                                <li><a href="{% url 'converterTool' 'length' 'meter-to-nanometer-convereter' %}"
+                                                title="Meter to Nanometer">Meter to Nanometer</a></li>
+
+                                <li><a href="{% url 'converterTool' 'length' 'meter-to-mile-convereter'  %}"
+                                                title="Meter to Mile">Meter
+                                                to Mile</a></li>
+
+                                <li><a href="{% url 'converterTool' 'length' 'meter-to-yard-convereter'  %}"
+                                                title="Meter to Yard">Meter
+                                                to Yard</a></li>
+
+                                <li><a href="{% url 'converterTool' 'length' 'meter-to-inch-convereter' %}"
+                                                title="Meter to Inch">Meter to
+                                                Inch</a></li>
+
+                                <li><a href="{% url 'converterTool' 'length' 'meter-to-foot-convereter' %}"
+                                                title="Meter to Foot">Meter to
+                                                Foot</a></li>
+
+                                <li><a href="{% url 'converterTool' 'length' 'meter-to-nautical-mile-convereter' %}"
+                                                title="Meter to Nautical Mile">Meter to Nautical Mile</a></li>
+
+
+                        </ul>
+                        <div class="text-center converter mt-5">
+                                <a href="#" class="border border-dark p-2 mt-3 rounded">
+                                        More Converter
+                                </a>
+                        </div>
+                </div>
+
+                <div class="col-xl-4 col-md-4 mt-5">
+                        <p class="alert alert-success text-center  font-weight-bold" style="color: #083d8d;">Time
+                                Converter</p>
+                        <ul>
+                                <li><a href="{% url  'converterTool' 'time' 'day-to-converter' %}"
+                                                title="Day to Hour">Day
+                                                to Hour</a>
+                                </li>
+                                <li><a href="{% url  'converterTool' 'time' 'day-to-minute-converter' %}"
+                                                title="Day to Minute">Day to
+                                                Minute</a></li>
+                                <li><a href="{% url 'converterTool' 'time' 'day-to-second-converter' %}"
+                                                title="Day to Second">Day to
+                                                Second</a></li>
+                                <li><a href="{% url 'converterTool' 'time' 'day-to-week-converter' %}"
+                                                title="Day to Week">Day to Week</a>
+                                </li>
+                                <li><a href="{% url 'converterTool' 'time' 'day-to-calender-converter' %}"
+                                                title="Day to Calender Year">Day to Calender Year</a></li>
+                                <li><a href="{% url 'converterTool' 'time' 'day-to-month-convereter' %}"
+                                                title="Day to Month">Day to
+                                                Month</a></li>
+
+                                <li><a href="{% url  'converterTool' 'time' 'week-to-day-converter' %}"
+                                                title="Week to Hour">Week to
+                                                Hour</a></li>
+                                <li><a href="{% url  'converterTool' 'time' 'week-to-minute-converter' %}"
+                                                title="Week to Minute">Week to
+                                                Minute</a></li>
+                                <li><a href="{% url 'converterTool' 'time' 'week-to-second-converter' %}"
+                                                title="Week to Second">Week to
+                                                Second</a></li>
+                                <li><a href="{% url 'converterTool' 'time' 'week-to-day-converter' %}"
+                                                title="Week to Day">Week to Day</a>
+                                </li>
+                                <li><a href="{% url 'converterTool' 'time' 'week-to-calender-converter' %}"
+                                                title="Week to Calender Year">Week to Calender Year</a></li>
+                                <li><a href="{% url 'converterTool' 'time' 'week-to-month-convereter' %}"
+                                                title="Week to Month">Week to
+                                                Month</a></li>
+
+                                <li><a href="{% url  'converterTool' 'time' 'month-to-hour-converter' %}"
+                                                title="Month to Hour">Month to
+                                                Hour</a></li>
+                                <li><a href="{% url  'converterTool' 'time' 'month-to-minute-converter' %}"
+                                                title="Month to Minute">Month
+                                                to Minute</a></li>
+                                <li><a href="{% url 'converterTool' 'time' 'month-to-second-converter' %}"
+                                                title="Month to Second">Month
+                                                to Second</a></li>
+                                <li><a href="{% url 'converterTool' 'time' 'month-to-day-converter' %}"
+                                                title="Month to Day">Month to
+                                                Day</a></li>
+                                <li><a href="{% url 'converterTool' 'time' 'month-to-calender-year-converter' %}"
+                                                title="Month to Calender Year">Month to Calender Year</a></li>
+                                <li><a href="{% url 'converterTool' 'time' 'month-to-week-convereter' %}"
+                                                title="Month to Week">Month to
+                                                Week</a></li>
+                                <li><a href="{% url 'converterTool' 'time' 'month-to-microsecond-converter' %}"
+                                                title="Month to Microsecond">Month to Microsecond</a></li>
+                                <li><a href="{% url 'converterTool' 'time' 'month-to-millisecond-convereter' %}"
+                                                title="Month to Millisecond">Month to Millisecond</a></li>
+
+                        </ul>
+                        <div class="text-center converter mt-5">
+                                <a href="#" class="border border-dark p-2 mt-3 rounded">
+                                        More Converter
+                                </a>
+                        </div>
+                </div>
+
+
+                <div class="col-xl-4 col-md-4 mt-5">
+                        <p class="alert alert-success text-center  font-weight-bold" style="color: #083d8d;">Volume
+                                Converter</p>
+                        <ul>
+                                <li><a href="{% url 'converterTool' 'angle' 'degree-to-gradian-converter' %}"
+                                                title="Litre to Millitre">Litre to Millilitre</a></li>
+                                <li><a href="{% url 'converterTool' 'angle' 'degree-to-milligradian-converter' %}"
+                                                title="Litre to Gallon">Litre to Gallon</a></li>
+                                <li><a href="{% url 'converterTool' 'angle' 'day-to-week-converter' %}"
+                                                title="Litre to Imperial Quart">Litre to Imperial Quart</a></li>
+                                <li><a href="{% url 'converterTool' 'angle' 'day-to-week-converter' %}"
+                                                title="Litre to Imperial Pint">Litre to Imperial Pint</a></li>
+
+
+                                <li><a href="{% url 'converterTool' 'angle' 'degree-to-gradian-converter' %}"
+                                                title="Millilitre to Millitre">Millilitre to Litre</a></li>
+                                <li><a href="{% url 'converterTool' 'angle' 'degree-to-milligradian-converter' %}"
+                                                title="Millilitre to Gallon">Millilitre to Gallon</a></li>
+                                <li><a href="{% url 'converterTool' 'angle' 'day-to-week-converter' %}"
+                                                title="Millilitre to Imperial Quart">Millilitre to Imperial Quart</a>
+                                </li>
+                                <li><a href="{% url 'converterTool' 'angle' 'day-to-week-converter' %}"
+                                                title="Millilitre to Imperial Pint">Millilitre to Imperial Pint</a></li>
+
+
+
+                                <li><a href="{% url 'converterTool' 'angle' 'degree-to-gradian-converter' %}"
+                                                title="Gallon to Millilitre">Gallon to Millilitre</a></li>
+                                <li><a href="{% url 'converterTool' 'angle' 'degree-to-milligradian-converter' %}"
+                                                title="Gallon to Gallon">Gallon to Gallon</a></li>
+                                <li><a href="{% url 'converterTool' 'angle' 'day-to-week-converter' %}"
+                                                title="Gallon to Imperial Quart">Gallon to Imperial Quart</a></li>
+                                <li><a href="{% url 'converterTool' 'angle' 'day-to-week-converter' %}"
+                                                title="Gallon to Imperial Pint">Gallon to Imperial Pint</a></li>
+
+
+                                <li><a href="{% url 'converterTool' 'angle' 'degree-to-gradian-converter' %}"
+                                                title="Imperial Quart to Millilitre">Imperial Quart to Millilitre</a>
+                                </li>
+                                <li><a href="{% url 'converterTool' 'angle' 'degree-to-milligradian-converter' %}"
+                                                title="Imperial Quart to Gallon">Imperial Quart to Gallon</a></li>
+                                <li><a href="{% url 'converterTool' 'angle' 'day-to-week-converter' %}"
+                                                title="Imperial Quart to Litre">Imperial Quart to Litre</a></li>
+                                <li><a href="{% url 'converterTool' 'angle' 'day-to-week-converter' %}"
+                                                title="Imperial Quart to Imperial Pint">Imperial Quart to Imperial
+                                                Pint</a></li>
+
+                                <li><a href="{% url 'converterTool' 'angle' 'degree-to-gradian-converter' %}"
+                                                title="Imperial Pint to Millilitre">Imperial Pint to Millilitre</a></li>
+                                <li><a href="{% url 'converterTool' 'angle' 'degree-to-milligradian-converter' %}"
+                                                title="Imperial Pint to Gallon">Imperial Pint to Gallon</a></li>
+                                <li><a href="{% url 'converterTool' 'angle' 'day-to-week-converter' %}"
+                                                title="Imperial Pint to Litre">Imperial Pint to Litre</a></li>
+                                <li><a href="{% url 'converterTool' 'angle' 'day-to-week-converter' %}"
+                                                title="Imperial Pint to Imperial Pint">Imperial Pint to Imperial
+                                                Quart</a></li>
+
+
+
+                        </ul>
+                        <div class="text-center converter mt-5">
+                                <a href="#" class="border border-dark p-2 mt-3 rounded">
+                                        More Converter
+                                </a>
+                        </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mt-5">
+                        <p class="alert alert-success text-center  font-weight-bold" style="color: #083d8d;">Mass
+                                Converter</p>
+                        <ul>
+                                <li><a href="{% url 'converterTool' 'length' 'kilometer-to-meter-converter' %}"
+                                                title="Tonne to Kilogram">Tonne to Kilogram</a></li>
+
+                                <li><a href="{% url 'converterTool' 'length' 'kilometer-to-centimeter-converter'%}"
+                                                title="Tonne to Microgram">Tonne to Microgram</a></li>
+
+                                <li><a href="{% url 'converterTool' 'length' 'kilometer-to-millimeter-converter' %}"
+                                                title="Tonne to Milligram">Tonne to Milligram</a></li>
+
+                                <li><a href="{% url 'converterTool' 'length' 'kilometer-to-micrometer' %}"
+                                                title="Tonne to Imperial Tonne">Tonne to Imperial Tonne</a></li>
+
+
+                                <li><a href="{% url 'converterTool' 'length' 'kilometer-to-meter-converter' %}"
+                                                title="Kilogram to Tonne">Kilogram to Kilogram</a></li>
+
+                                <li><a href="{% url 'converterTool' 'length' 'kilometer-to-centimeter-converter'%}"
+                                                title="Kilogram to Microgram">Kilogram to Microgram</a></li>
+
+                                <li><a href="{% url 'converterTool' 'length' 'kilometer-to-millimeter-converter' %}"
+                                                title="Kilogram to Milligram">Kilogram to Milligram</a></li>
+
+                                <li><a href="{% url 'converterTool' 'length' 'kilometer-to-micrometer' %}"
+                                                title="Kilogram to Imperial Tonne">Kilogram to Imperial Tonne</a></li>
+
+
+                                <li><a href="{% url 'converterTool' 'length' 'kilometer-to-meter-converter' %}"
+                                                title="Milligram to Tonne">Milligram to Kilogram</a></li>
+
+                                <li><a href="{% url 'converterTool' 'length' 'kilometer-to-centimeter-converter'%}"
+                                                title="Milligram to Microgram">Milligram to Microgram</a></li>
+
+                                <li><a href="{% url 'converterTool' 'length' 'kilometer-to-millimeter-converter' %}"
+                                                title="Milligram to Tonne">Milligram to Tonne</a></li>
+
+                                <li><a href="{% url 'converterTool' 'length' 'kilometer-to-micrometer' %}"
+                                                title="Milligram to Imperial Tonne">Milligram to Imperial Tonne</a></li>
+
+
+                                <li><a href="{% url 'converterTool' 'length' 'kilometer-to-meter-converter' %}"
+                                                title="Imperial Tonne to Tonne">Imperial Tonne to Kilogram</a></li>
+
+                                <li><a href="{% url 'converterTool' 'length' 'kilometer-to-centimeter-converter'%}"
+                                                title="Imperial Tonne to Microgram">Imperial Tonne to Microgram</a></li>
+
+                                <li><a href="{% url 'converterTool' 'length' 'kilometer-to-millimeter-converter' %}"
+                                                title="Imperial Tonne to Tonne">Imperial Tonne to Tonne</a></li>
+
+                                <li><a href="{% url 'converterTool' 'length' 'kilometer-to-micrometer' %}"
+                                                title="Imperial Tonne to Milligram">Imperial Tonne to Milligram</a></li>
+
+                                <li><a href="{% url 'converterTool' 'length' 'kilometer-to-meter-converter' %}"
+                                                title="Gram to Tonne">Gram
+                                                to Kilogram</a></li>
+
+                                <li><a href="{% url 'converterTool' 'length' 'kilometer-to-centimeter-converter'%}"
+                                                title="Gram to Microgram">Gram to Microgram</a></li>
+
+                                <li><a href="{% url 'converterTool' 'length' 'kilometer-to-millimeter-converter' %}"
+                                                title="Gram to Tonne">Gram to Tonne</a></li>
+
+                                <li><a href="{% url 'converterTool' 'length' 'kilometer-to-micrometer' %}"
+                                                title="Gram to Milligram">Gram
+                                                to Milligram</a></li>
+
+
+                        </ul>
+                        <div class="text-center converter mt-5">
+                                <a href="#" class="border border-dark p-2 mt-3 rounded">
+                                        More Converter
+                                </a>
+                        </div>
+                </div>
+
+                <div class="col-xl-4 col-md-4 mt-5">
+                        <p class="alert alert-success text-center  font-weight-bold" style="color: #083d8d;">Energy
+                                Converter</p>
+                        <ul>
+                                <li><a href="{% url  'converterTool' 'time' 'joule-to-kilojoule-converter' %}"
+                                                title="Joule to Kilojoule">Joule to Kilojoule</a></li>
+                                <li><a href="{% url  'converterTool' 'time' 'joule-to-Gram-calorie-converter' %}"
+                                                title="Joule to Gram Calorie">Joule to Gram Calorie</a></li>
+                                <li><a href="{% url 'converterTool' 'time' 'day-to-second-converter' %}"
+                                                title="Joule to Kilo Calorie">Joule to Kilo Calorie</a></li>
+                                <li><a href="{% url 'converterTool' 'time' 'day-to-week-converter' %}"
+                                                title="Joule to Watt Hour">Joule to
+                                                Watt Hour</a></li>
+
+
+                                <li><a href="{% url  'converterTool' 'time' 'joule-to-kilojoule-converter' %}"
+                                                title="Kilojoule to Kilojoule">Kilojoule to Joule</a></li>
+                                <li><a href="{% url  'converterTool' 'time' 'joule-to-Gram-calorie-converter' %}"
+                                                title="Kilojoule to Gram Calorie">Kilojoule to Gram Calorie</a></li>
+                                <li><a href="{% url 'converterTool' 'time' 'day-to-second-converter' %}"
+                                                title="Kilojoule to Kilo Calorie">Kilojoule to Kilo Calorie</a></li>
+                                <li><a href="{% url 'converterTool' 'time' 'day-to-week-converter' %}"
+                                                title="Kilojoule to Watt Hour">Kilojoule to Watt Hour</a></li>
+
+
+                                <li><a href="{% url  'converterTool' 'time' 'joule-to-kilojoule-converter' %}"
+                                                title="Gramcalorie to Kilojoule">Gramcalorie to Joule</a></li>
+                                <li><a href="{% url  'converterTool' 'time' 'joule-to-Gram-calorie-converter' %}"
+                                                title="Gramcalorie to Gram Calorie">Gramcalorie to Kilojoule</a></li>
+                                <li><a href="{% url 'converterTool' 'time' 'day-to-second-converter' %}"
+                                                title="Gramcalorie to Kilo Calorie">Gramcalorie to Kilo Calorie</a></li>
+                                <li><a href="{% url 'converterTool' 'time' 'day-to-week-converter' %}"
+                                                title="Gramcalorie to Watt Hour">Gramcalorie to Watt Hour</a></li>
+
+                                <li><a href="{% url  'converterTool' 'time' 'joule-to-kilojoule-converter' %}"
+                                                title="Kilocalorieto Kilojoule">Kilocalorie to Joule</a></li>
+                                <li><a href="{% url  'converterTool' 'time' 'joule-to-Gram-calorie-converter' %}"
+                                                title="Kilocalorie to Gram Calorie">Kilocalorie to Kilojoule</a></li>
+                                <li><a href="{% url 'converterTool' 'time' 'day-to-second-converter' %}"
+                                                title="Kilocalorie to Kilo Calorie">Kilocalorie to Gramcalorie</a></li>
+                                <li><a href="{% url 'converterTool' 'time' 'day-to-week-converter' %}"
+                                                title="Kilocalorie to Watt Hour">Kilocalorie to Watt Hour</a></li>
+
+                                <li><a href="{% url  'converterTool' 'time' 'joule-to-kilojoule-converter' %}"
+                                                title="Watt hour to Kilojoule">Watt hour to Joule</a></li>
+                                <li><a href="{% url  'converterTool' 'time' 'joule-to-Gram-calorie-converter' %}"
+                                                title="Watt hour to Gram Calorie">Watt hour to Kilojoule</a></li>
+                                <li><a href="{% url 'converterTool' 'time' 'day-to-second-converter' %}"
+                                                title="Watt hour to Kilo Calorie">Watt hour to Kilo Calorie</a></li>
+                                <li><a href="{% url 'converterTool' 'time' 'day-to-week-converter' %}"
+                                                title="Watt hour to Watt Hour">Watt
+                                                hour to Gramcalorie</a></li>
+
+
+                        </ul>
+                        <div class="text-center converter mt-5">
+                                <a href="#" class="border border-dark p-2 mt-3 rounded">
+                                        More Converter
+                                </a>
+                        </div>
+                </div>
+
+
+
+
+        </div>
+</div>
+
+
+
+
+
+
+
+{% endblock %}

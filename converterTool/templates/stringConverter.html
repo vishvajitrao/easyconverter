@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+{% block title %} Online String Converter Tools - Easy Converter {% endblock %}
+{% block menu %}{% include 'menu.html' %} {% endblock %}
+{% block footer %}{% include 'footer.html' %} {% endblock %}
+{% load static %}
+{% block seo %}
+<meta name="title" content="Online String Converter Tools - Easy Converter">
+<meta name="description" content="Our online string converter tools allow you to convert string to any format, the format may be binary, base64, hexadecimal, upper and lower format, etc.">
+<meta name="keywords" content="Easy Converter, Online free string converter, string to binary, binary to string, online character counter, online words counter, string to base64">
+<meta name="robots" content="index, follow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="English">
+{% endblock %}
+{% block body %}
+
+<div class="container mt-5">
+    <div class="col-xl-12 text-center">
+        <a href="{% url 'Index2' %}" class="font-weight-bold text-center">Home</a> <i
+            class="fas fa-arrow-circle-right"></i>
+        <p class="font-weight-bold d-inline">Online String Converter Tools </p>
+        
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-xl-12 text-center m2-5">
+            <h3 class="">Online String Converter Tools</h3>
+            <p class="text-center">All the string converter tools on one place.</p>
+        </div>
+    </div>
+</div> 
+<div class="container mt-5">
+    <div class="row">
+
+
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'charCount' %}">
+                <p class="border border-dark p-3 rounded">Character Counter</p>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'Password' %}">
+                <p class="border border-dark p-3 rounded">Password Generator</p>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'upperCase' %}">
+                <p class="border border-dark p-3 rounded">Lower to Upper</p>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'lowerCase' %}">
+                <p class="border border-dark p-3 rounded">Upper to Lower</p>
+            </a>
+        </div>
+
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'wordCount' %}">
+                <p class="border border-dark p-3 rounded">Words Counter</p>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'titleCase1' %}">
+                <p class="border border-dark p-3 rounded">Titlecase Converter</p>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'Capitalize' %}">
+                <p class="border border-dark p-3 rounded">Capitalize Converter</p>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'stringReverse' %}">
+                <p class="border border-dark p-3 rounded">String Reverse</p>
+            </a>
+        </div>
+
+
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'stringtoBin' %}">
+                <p class="border border-dark p-3 rounded">String to Binary </p>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'bintoString' %}">
+                <p class="border border-dark p-3 rounded">Binary to String</p>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'stringtoHex' %}">
+                <p class="border border-dark p-3 rounded">String to Hex</p>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'hextoString' %}">
+                <p class="border border-dark p-3 rounded">Hex to String</p>
+            </a>
+        </div>
+
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'base64Encode' %}">
+                <p class="border border-dark p-3 rounded">Base64 Encode </p>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'base64Decode' %}">
+                <p class="border border-dark p-3 rounded">Base64 Decode</p>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'htmlEncode' %}">
+                <p class="border border-dark p-3 rounded">HTML Encode</p>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'htmlDecode' %}">
+                <p class="border border-dark p-3 rounded">HTML Decode</p>
+            </a>
+        </div>
+
+
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'wordsReverse' %}">
+                <p class="border border-dark p-3 rounded">Words Reverse</p>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'urlEncode' %}">
+                <p class="border border-dark p-3 rounded">URL Encode</p>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'urlDecode' %}">
+                <p class="border border-dark p-3 rounded">URL Decode</p>
+            </a>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+{% endblock %}

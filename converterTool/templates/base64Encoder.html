@@ -1,0 +1,61 @@
+
+{% extends 'base.html' %}
+{% block title %} Best Base64 Encode Tool to Encode Base64 string. {% endblock %}
+{% block menu %}{% include 'menu.html' %} {% endblock %}
+{% block footer %}{% include 'footer.html' %} {% endblock %}
+{% block body %}
+{% block seo %}
+<meta name="title" content="Best Base64 Encoder Online Tool">
+<meta name="description" content="This toll will help you to encode base64 string.">
+<meta name="keywords" content="base63 String, Base64 Decoder, base64 encoding, base64 decoding, base64 encoder online tool">
+<meta name="robots" content="index, follow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="English">
+<meta name="author" content="The Converter Tool Hub">
+
+{% endblock %}
+<div class="container-fluid mt-5">
+    <div class="col-xl-12 text-center">
+        <a href="{% url 'Index2' %}" class="font-weight-bold text-center">Home</a> <i
+            class="fas fa-arrow-circle-right"></i><a href="{% url 'stringConverter' %}"
+            class="font-weight-bold"> All String Tools </a><i class="fas fa-arrow-circle-right"></i> 
+        <p class="font-weight-bold d-inline">Best Base64 Encode Tool to Encode Base64 string</p>
+
+    </div>
+    <hr>
+</div>
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col-xl-12 text-center">
+            <h1 class="text-center">Best Base64 Encode Tool to Encode Base64 string</h1>
+            <p class="text-center">Best HTML Encode tool to Encode HTML Encoded strings,url.</p>
+        </div>
+        <div class="col-xl-8 offset-xl-2">
+            <div class="form-group m-3">
+                <label for="exampleFormControlTextarea1" class="font-weight-bold">Write Base64 Strings Here.</label>
+                <textarea class="form-control shadow-none border border-dark" id="exampleFormControlTextarea1" rows="8" name="wordType" placeholder="Write Base64 Strings Here."  spellcheck="false"></textarea>
+                
+              </div>
+        </div>
+   <div class="col-xl-12">
+    <center>
+        <button id="btn" class="btn btn-success shadow-none" onclick="base64Encode()">Encode</button>
+        
+        <button id="clear" class="btn btn-danger shadow-none">Clear</button>
+        <button id="clear" class="btn btn-dark shadow-none" onclick="Reload()">Refresh</button>
+        <button id="btn" class="btn btn-info shadow-none" data-clipboard-target="#results">Copy To Clipboard</button>
+    </center>
+    
+    <div class="col-xl-8 offset-xl-2 mt-2">
+        
+        <textarea class="form-control shadow-none border border-dark mb-2" id="results" rows="5" name="wordType" placeholder="Output" spellcheck="false"></textarea>
+       
+    </div>
+   </div>
+
+        
+
+    </div>
+</div>
+
+{% endblock %}

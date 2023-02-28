@@ -1,0 +1,81 @@
+
+{% extends 'base.html' %}
+{% block title %} Binary to String Online Converter - Easy Converter{% endblock %}
+{% block menu %}{% include 'menu.html' %} {% endblock %}
+{% block footer %}{% include 'footer.html' %} {% endblock %}
+{% block seo %}
+<meta name="title" content="Binary to String Online Converter - Easy Converter">
+<meta name="description" content="Our binary to string online converter tool allow you to convert your binary to string.
+<meta name="keywords" content="Easy Converter, binary to string online converter, free online binary to string converter
+<meta name="robots" content="index, follow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="English">
+{% endblock %}
+{% block body %}
+<div class="container-fluid mt-5">
+    <div class="col-xl-12 text-center">
+        <a href="{% url 'Index2' %}" class="font-weight-bold text-center">Home</a> <i
+            class="fas fa-arrow-circle-right"></i><a href="{% url 'stringConverter' %}"
+            class="font-weight-bold"> All String Tools </a><i class="fas fa-arrow-circle-right"></i> 
+        <p class="font-weight-bold d-inline">Binary to String Online Converter Tool</p>
+
+    </div>
+    <hr>
+</div>
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col-xl-12 text-center">
+            <h1 class="text-center">Binary to String Online Converter Tool</h1>
+            <p class="text-center">This tool wwill help you to convert binary to string.</p>
+        </div>
+        <div class="col-xl-8 offset-xl-2">
+            <div class="form-group m-3">
+                <label for="exampleFormControlTextarea1" class="font-weight-bold">Write String Here.</label>
+                <textarea class="form-control shadow-none border border-dark" id="exampleFormControlTextarea1" rows="8"
+                    name="wordType" placeholder="Write String Here" spellcheck="false"></textarea>
+
+            </div>
+        </div>
+        <div class="col-xl-12">
+            <center>
+                <button id="btn" class="btn btn-success shadow-none" onclick="binarytoString()">Convert</button>
+
+                <button id="clear" class="btn btn-danger shadow-none">Clear</button>
+                <button id="clear" class="btn btn-dark shadow-none" onclick="Reload()">Refresh</button>
+                <button id="btn" class="btn btn-info shadow-none" data-clipboard-target="#results">Copy To
+                    Clipboard</button>
+            </center>
+
+            <div class="col-xl-8 offset-xl-2 mt-2">
+
+                <textarea class="form-control shadow-none border border-dark mb-5" id="results" rows="5" name="wordType"
+                    placeholder="Output" spellcheck="false"></textarea>
+                    <div class="content">
+                        <h2>What is Binary Number?</h2>
+                        <p><b>Ans:- </b>A binary number is a number expressed in base-2 binary numeral system, a method of mathematical expression allows only two symbols <b>"0"</b> or <b>"1"</b>
+                            .</p><hr>
+                            <h2>What is binary to string online converter?</h2>
+                            <p><b>Ans:-</b> Our binary to string online converter tool, allow you to convert your binary number ( 1 or 0) to string.</p>
+                        <p>You can see following example for better understanding.</p>
+                            <b>Example:</b><br>
+                        
+                        <p>Binary value is:-  <i class="fas fa-arrow-circle-right"></i> 01110100 01101111 01110000 00100000 01101111 01101110 01101100 01101001 01101110 01100101 00100000 01100011 01101111 01101110 01110110 01100101 01110010 01110100 01100101 01110010 </p>
+                        <p>String value is:-  <i class="fas fa-arrow-circle-right"></i> Easy Converter</p>
+                        <hr>
+                        
+                        <h2>Are this tool is free?</h2>
+                        <p><b>Ans:- </b><b>Yes</b>, Our online lower case to upper case converter is completely free. You don't need to pay for using this.</p>
+                    </div>
+
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block title %} Online Lower To Upper Case Converter - Easy Converter{% endblock %}
+{% block menu %}{% include 'menu.html' %} {% endblock %}
+{% block footer %}{% include 'footer.html' %} {% endblock %}
+{% block seo %}
+<meta name="title" content="Online Lower To Upper Case Converter - Easy Converter">
+<meta name="description" content="Our online lower to upper case converter tool allow you to convert Lower case characters to upper case.">
+<meta name="keywords" content="Easy Converter, online lower to upper case converter, free lower to upper case converter">
+<meta name="robots" content="index, follow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="English">
+{% endblock %}
+{% block body %}
+
+<div class="container-fluid mt-5">
+    <div class="col-xl-12 text-center">
+        <a href="{% url 'Index2' %}" class="font-weight-bold text-center">Home</a> <i
+            class="fas fa-arrow-circle-right"></i><a href="{% url 'stringConverter' %}"
+            class="font-weight-bold"> All String Tools </a><i class="fas fa-arrow-circle-right"></i> 
+        <p class="font-weight-bold d-inline">Online Lower To Upper Case Converter </p>
+
+    </div>
+    <hr>
+</div>
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col-xl-12 text-center">
+            <h3 class="text-center">Online Lower To Upper Case Converter Tool</h3>
+            <p class="text-center">If you have bulk small characters, Then this tool will help you to convert
+                lower Case to upper case.</p>
+        </div>
+        <br>
+        <br>
+        {% block left_adsense %} {% include 'string_sidebar.html' %} {% endblock left_adsense %}
+        <div class="col-xl-8">
+            <div class="form-group m-3">
+                <label for="exampleFormControlTextarea1" class="font-weight-bold">Type/Paste Your Characters in Text
+                    Area</label>
+                <textarea class="form-control shadow-none border border-dark" id="exampleFormControlTextarea1"
+                    rows="10" placeholder="Type/Paste Your Characters Here"></textarea>
+            </div>
+            <center>
+                <button id="btn" class="btn btn-success shadow-none mb-5" onclick="upperCase()">Convert Upper</button>
+                <button id="btn" class="btn btn-info shadow-none mb-5"
+                    data-clipboard-target="#exampleFormControlTextarea1">Copy To Clipboard</button>
+                <button id="clear" class="btn btn-danger shadow-none mb-5" onclick="Clear()">Clear</button>
+            </center>
+            <div class="content">
+                <h2>What is Online Lower to upper Case Converter?</h2>
+                <p><b>Ans:- </b>Online lower to upper case converter is a free online tool that lets you convert your bulk small string into the upper case in just one click.</p>
+                <p><b>For example:</b><br>
+                    This is the best example to understand:<br>
+                    
+                    <b>Easy Converter</b> <i
+                    class="fas fa-arrow-circle-right"></i> <b>Easy Converter</b>
+                    <br>
+                    In the above example, the left character is in the lower case and the right character is in the upper case. 
+                    </p>
+                <hr>
+                
+                <h2>Are this tool is free?</h2>
+                <p><b>Ans:- </b><b>Yes</b>, Our online lower case to upper case converter is completely free. You don't need to pay for using this.</p>
+            </div>
+        </div>
+       
+
+
+
+
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %} {{data.title}} - Converter Tool{% endblock %}
+{% block menu %}{% include 'menu.html' %} {% endblock %}
+{% block footer %}{% include 'footer.html' %} {% endblock %}
+{% block body %}
+<div class="container-fluid mt-5">
+    <div class="row">
+
+        <div class="col-xl-6 offset-xl-3">
+            <h1 class="text-center">{{data.title}}</h1>
+            <p>{{data.content | safe}}</p>
+        </div>
+       
+
+    </div>
+</div>
+
+{% endblock %}

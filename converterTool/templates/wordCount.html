@@ -1,0 +1,79 @@
+
+{% extends 'base.html' %}
+
+{% block title %} Online Words Counter Tool - Easy Converter{% endblock %}
+{% block menu %}{% include 'menu.html' %} {% endblock %}
+{% block footer %}{% include 'footer.html' %} {% endblock %}
+{% block seo %}
+<meta name="title" content="Online Words Counter Tool - Easy Converter">
+<meta name="description" content="Our online lower to upper case converter tool allow you to convert Lower case characters to upper case.">
+<meta name="keywords" content="Easy Converter, online upper to lowerCasecase converter, free upper to lower case converter">
+<meta name="robots" content="index, follow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="English">
+{% endblock %}
+{% block body %} 
+<div class="container-fluid mt-5">
+    <div class="col-xl-12 text-center">
+        <a href="{% url 'Index2' %}" class="font-weight-bold text-center">Home</a> <i
+            class="fas fa-arrow-circle-right"></i><a href="{% url 'stringConverter' %}"
+            class="font-weight-bold"> All String Tools </a><i class="fas fa-arrow-circle-right"></i> 
+        <p class="font-weight-bold d-inline">Online Words Counter Tool</p>
+
+    </div>
+    <hr>
+</div>
+<div class="container-fluid mt-5">
+    <div class="row">
+      
+        <div class="col-xl-12 text-center">
+            <h1 class="text-center">Online Words Counter Tool</h1>
+            <p class="text-center">If you have bulk words, Then free words counter tool will help you to count total number of words.</p>
+        </div>
+
+        
+
+        <div class="col-xl-8">
+            
+
+            <div class="form-group m-3">
+                <label for="exampleFormControlTextarea1" class="font-weight-bold">Type Your words in Text
+                    Area</label>
+                <textarea class="form-control shadow-none border border-dark" id="exampleFormControlTextarea1" rows="10"
+                    name="wordType" placeholder="Type/Paste your words here to count"></textarea>
+            </div>
+        
+            <center>
+                
+                    <p class="text-center font-weight-bold mb-5 font-weight-bold">Total Words:- <span id="totalValue">0</span></p>
+                
+                <button id="btn" class="btn btn-success shadow-none mb-5" onclick="wordCount()">Count Words</button>
+                <button data-clipboard-target="#totalValue" class="btn btn-primary shadow-none mb-5" onclick="Clear()">Copy To Clipboard</button>
+                <button id="clear" class="btn btn-danger shadow-none mb-5">Clear</button>
+                
+            </center>
+            <div class="content">
+                <h2>What is online words counter tool?</h2>
+                <p><b>Ans:- </b>Our online words counter tools is is used to count total number of words.</p>
+                <p> If you have large words collections and you want to count them, Than this tools is very helpful in that situation because you can easily count total number of words in just one click.
+                    </p>
+                <hr>
+                
+                <h2>Are this tool is free?</h2>
+                <p><b>Ans:- </b><b>Yes</b>, Our online lower case to upper case converter is completely free. You don't need to pay for using this.</p>
+            </div>
+
+        </div>
+        {% block right_adsense %} {% include 'string_sidebar.html' %} {% endblock right_adsense %}
+       
+
+        
+
+
+    </div>
+</div>
+
+
+
+
+{% endblock %}

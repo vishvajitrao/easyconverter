@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block title %} Page Not Found - Easy Converter {% endblock %}
+{% block menu %}{% include 'menu.html' %} {% endblock %}
+{% block footer %}{% include 'footer.html' %} {% endblock %}
+{% load static %}
+{% block body %}
+{% block seo %}
+
+{% endblock %}
+<div class="container-fluid my-5">
+    <div class="row">
+        <div class="col-xl-8 offset-xl-2">
+           
+                <div class="card m-5">
+                    <div class="card-header">
+                        <b>www.easyconverter.info</b>
+                    </div>
+                    
+                    <div class="card-body">
+                        <h5 class="card-title">Page Not Found</h5>
+                        <p class="card-text">Please, visit our home page and explore following tools.</p>
+                        <ul class="list-group">
+                            <a href="{% url 'stringConverter' %}"><li class="list-group-item">String Converter</li></a>
+                            <a href="{% url 'numberConverter' %}"><li class="list-group-item">Number Converter</li></a>
+                            <a href="{% url 'tempConverter' %}"><li class="list-group-item">Temprature Converter</li></a>
+                            
+                          </ul>
+                        <a href="/" class="btn btn-primary text-center shadow-none mt-3">Home</a>
+                    </div>
+    
+                </div>
+            
+           
+        </div>
+    </div>
+</div>
+{% endblock %}

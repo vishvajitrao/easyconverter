@@ -1,0 +1,76 @@
+
+{% extends 'base.html' %}
+{% block title %} Online Characters Counter Tool - Easy Converter {% endblock %}
+{% block menu %}{% include 'menu.html' %} {% endblock %}
+{% block footer %}{% include 'footer.html' %} {% endblock %}
+{% block seo %}
+<meta name="title" content="Online Character Counter Tool - Easy Converter">
+<meta name="description" content="Our online character counter tool allow you to count total number of characters">
+<meta name="keywords" content="Easy Converter, online character counter tool, free character counter tool">
+<meta name="robots" content="index, follow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="English">
+{% endblock %}
+{% block body %}
+<div class="container-fluid mt-5">
+    <div class="col-xl-12 text-center">
+        <a href="{% url 'Index2' %}" class="font-weight-bold text-center">Home</a> <i
+            class="fas fa-arrow-circle-right"></i><a href="{% url 'stringConverter' %}"
+            class="font-weight-bold"> All String Tools </a><i class="fas fa-arrow-circle-right"></i> 
+        <p class="font-weight-bold d-inline">Online Characters Counter Tool </p>
+
+    </div>
+    <hr>
+</div>
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col-xl-12 text-center">
+            <h1 class="text-center">Online Characters Counter Tool</h1>
+            <p class="text-center">If you have bulk characters, Then these free characters counter will help you to count the total number of characters.
+            </p>
+        </div>
+        <div class="col-xl-12 mt-3">
+
+            <center>
+                <strong class="text-center font-weight-bold mb-5 alert alert-success mt-3">Total Characters:- <span
+                        id="totalValue">0</span></strong>
+            </center>
+
+        </div>
+        <div class="col-xl-8">
+
+            <div class="form-group m-3">
+                <label for="exampleFormControlTextarea1" class="font-weight-bold">Type/Paste Your Characters in Text
+                    Area</label>
+                <textarea class="form-control shadow-none border border-dark" id="exampleFormControlTextarea1"
+                    rows="8" placeholder="Type/Paste Your Characters Here"></textarea>
+            </div>
+            <center>
+                <button id="btn" class="btn btn-success shadow-none mb-5" onclick="charCount()">Count
+                    Character</button>
+                <button id="btn" class="btn btn-info shadow-none mb-5" data-clipboard-target="#totalValue">Copy To
+                    Clipboard</button>
+                <button id="clear" class="btn btn-danger shadow-none mb-5" onclick="Clear()">Clear</button>
+            </center>
+
+            <div class="content">
+                <h2>What is Characters Counter Tool?</h2>
+                <p><b>Ans:- </b>Online characters counter is a tool that ley you to count any number of characters. Most of the time you need to count some characters for a specific purpose, our characters make it easy to count characters instead of counting manually.</p>
+                <hr>
+                <h2>Why Easy Converter's Characters Counter is good?</h2>
+                <p><b>Ans:- </b>Our Online Character counter tool is completely free.
+                    You don't need to pay for the count number of characters.
+                    You can count your characters in just one click.</p>
+                    <hr>
+                <h2>How can convert characters?</h2>
+                <p><b>Ans:- </b>To convert characters, you need to just paste your string in the above text area and click on the Count Characters button. After clicking on the button, you are above to see total characters in the Total Characters section. You can click on Copy To Click board button to copy the number of characters.</p>
+            </div>
+
+        </div>
+       
+            {% block right_adsense %} {% include 'string_sidebar.html' %} {% endblock right_adsense %}
+       
+    </div>
+</div>
+
+{% endblock %}

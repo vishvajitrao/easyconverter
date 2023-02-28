@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block title %} {{data.0.category.name}} Converter Tools - Easy Converter{% endblock %}
+{% block menu %}{% include 'menu.html' %} {% endblock %}
+{% block footer %}{% include 'footer.html' %} {% endblock %}
+{% load static %}
+{% block seo %}
+<meta name="description" content="{{data.description}}">
+<meta name="keywords" content="{{data.keywords}}">
+
+{% endblock %}
+{% block body %}
+
+<div class="container-fluid">
+
+
+    {% if data %}
+    <h2 class="text-center m-5">All {{data.0.category.name}} Tools on One Place</h2>
+    <hr style="height: 3px;background-color: #ff4c23; width: 200px;">
+    <div class="row">
+        {% for tool in data %}
+        <div class="col-xl-3 p-3 text-center">
+            <a href="{% url 'converterTool' tool.category.name|lower tool.url %}" class="dynamic_tools">
+                <p class="border border-dark p-3 rounded">{{tool.convertFrom}} To {{tool.convertTo}}</p>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+
+    {% else %}
+    <div class="row">
+        <div class="col-xl-4 offset-xl-4 text-center">
+            <div class="card m-5">
+                <div class="card-header">
+                    <b>www.easyconverter.info</b>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Coming Soon ..</h5>
+                    <p class="card-text">We couldn't fetch your query from our database.</p>
+                    <a href="/" class="btn btn-primary text-center shadow-none">Home</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+        {% endif %}
+
+    </div>
+    {% endblock %}

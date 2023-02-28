@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block title %} Online Shake-128 Hash Generator - Easy Converter{% endblock %}
+{% block menu %}{% include 'menu.html' %} {% endblock %}
+{% block footer %}{% include 'footer.html' %} {% endblock %}
+{% block body %}
+<div class="container-fluid mt-5">
+    <div class="col-xl-12 text-center">
+        <a href="{% url 'Index2' %}" class="font-weight-bold text-center">Home</a> <i
+            class="fas fa-arrow-circle-right"></i><a href="{% url 'all_hash_generator_page' %}"
+            class="font-weight-bold"> All Hash Generator Tools </a><i class="fas fa-arrow-circle-right"></i> 
+        <p class="font-weight-bold d-inline">Best Online Shake-128 Hash Generator</p>
+
+    </div>
+    <hr>
+</div>
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col-xl-12 text-center">
+            <h1 class="text-center">Online Shake-128 Hash Generator</h1>
+            <p class="text-center">This tool will help you to generte shake-128 hash value.</p>
+        </div>
+        <div class="col-xl-6 col-md-6">
+            <div class="form-group m-3">
+                <label for="exampleFormControlTextarea1" class="font-weight-bold">Write/Paste Your String Here.</label>
+                <textarea class="form-control shadow-none border border-dark mb-5" name="md5" cols="30" rows="4" placeholder="Write/Paste Your String Here" id="string_to_convert_hash"></textarea>
+                <input type="hidden" value="Shake_128" id="algo_name">
+            </div>
+            <center>
+                <button id="btn" class="btn btn-success shadow-none mb-5" onclick="hashConversion()">Convert</button>
+                <button id="btn" class="btn btn-info shadow-none mb-5" data-clipboard-target="#result"> <i class="fas fa-clipboard"></i> Copy To
+                    Clipboard</button>
+                <button id="clear" class="btn btn-danger shadow-none mb-5">Clear</button>
+            </center>
+            <textarea class="form-control shadow-none border border-dark mb-5" name="" id="result" cols="30" rows="4" placeholder="Output in MD5 hash"></textarea>
+        </div>
+        <div class="col-xl-6 col-md-6">
+            <p class="alert alert-success">Advertisement</p>
+        </div>
+
+
+
+    </div>
+</div>
+
+{% endblock %}

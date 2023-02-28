@@ -1,0 +1,160 @@
+{% extends 'base.html' %}
+{% block title %} Online Hash Generator Tools - Easy Converter {% endblock %}
+{% block menu %}{% include 'menu.html' %} {% endblock %}
+{% block footer %}{% include 'footer.html' %} {% endblock %}
+{% load static %}
+{% block seo %}
+<meta name="description" content="{{data.description}}">
+<meta name="keywords" content="{{data.keywords}}">
+
+{% endblock %}
+{% block body %}
+
+<div class="container mt-5">
+    <div class="col-xl-12 text-center">
+        <a href="{% url 'Index2' %}" class="font-weight-bold text-center">Home</a> <i
+            class="fas fa-arrow-circle-right"></i>
+        <p class="font-weight-bold d-inline">Online Hash Generator Tools </p>
+
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-xl-12 text-center m2-5">
+            <h3 class="">Online Hash Generator Tools</h3>
+            <p class="text-center">All the hash generator tools on one place.</p>
+        </div>
+    </div>
+</div>
+<div class="container mt-5">
+    <div class="row">
+
+
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'md5_hash_generator' %}">
+                <p class="border border-dark p-3 rounded">MD5 Generator</p>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'sha224_hash_generator' %}">
+                <p class="border border-dark p-3 rounded">SHA224 Generator</p>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'md4_hash_generator' %}">
+                <p class="border border-dark p-3 rounded">MD4 Generator</p>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'shake_128_hash_generator' %}">
+                <p class="border border-dark p-3 rounded">Shake 128 Generator</p>
+            </a>
+        </div>
+
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'sha1_hash_generator' %}">
+                <p class="border border-dark p-3 rounded">Sha1 Generator</p>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'whirlpool_hash_generator' %}">
+                <p class="border border-dark p-3 rounded">Whirlpool Generator</p>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'sm3_hash_generator' %}">
+                <p class="border border-dark p-3 rounded">SM3 Generator</p>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'sha384_hash_generator' %}">
+                <p class="border border-dark p-3 rounded">SHA384 Generator</p>
+            </a>
+        </div>
+
+
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'sha512_256_hash_generator' %}">
+                <p class="border border-dark p-3 rounded">SHA512_256 Generator </p>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'md5_sha1_hash_generator' %}">
+                <p class="border border-dark p-3 rounded">md5-sha1 Generator</p>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'mdc2_hash_generator' %}">
+                <p class="border border-dark p-3 rounded">MDC2 Generator</p>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'sha3_224_hash_generator' %}">
+                <p class="border border-dark p-3 rounded">sha512-224 Generator</p>
+            </a>
+        </div>
+
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'blake2s_hash_generator' %}">
+                <p class="border border-dark p-3 rounded">blake2s Generator</p>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'blake2b_hash_generator' %}">
+                <p class="border border-dark p-3 rounded">blake2b Generator</p>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'sha3_512_hash_generator' %}">
+                <p class="border border-dark p-3 rounded">sha3_512 Generator</p>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'sha3_256_hash_generator' %}">
+                <p class="border border-dark p-3 rounded">sha3_256 Generator</p>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'sha512_224_hash_generator' %}">
+                <p class="border border-dark p-3 rounded">sha512_224 Generator</p>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'sha3_384_hash_generator' %}">
+                <p class="border border-dark p-3 rounded">sha3_384 Generator</p>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'sha512_hash_generator' %}">
+                <p class="border border-dark p-3 rounded">sha512 Generator</p>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'sha3_224_hash_generator' %}">
+                <p class="border border-dark p-3 rounded">sha3_224 Generator</p>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'ripemd160_hash_generator' %}">
+                <p class="border border-dark p-3 rounded">ripemd160 Generator</p>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'sha256_hash_generator' %}">
+                <p class="border border-dark p-3 rounded">sha256 Generator</p>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'shake_256_hash_generator' %}">
+                <p class="border border-dark p-3 rounded">shake_256 Generator</p>
+            </a>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+{% endblock %}

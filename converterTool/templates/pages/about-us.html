@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %} About Us - Easy Converter {% endblock %}
+{% block menu %}{% include 'menu.html' %} {% endblock %}
+{% block footer %}{% include 'footer.html' %} {% endblock %}
+{% load static %}
+{% block body %}
+{% block seo %}
+
+{% endblock %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xl-8 col-md-8 col-sm-8 offset-xl-2 offset-md-2 mt-5">
+            <h1 class="text-center">About Us</h1>
+
+            <p>The Easy Converter is a free online converter tool that provides tool like unit converter, string converter, number converter, hash generator, password generator, etc.</p>
+            <div class="card-body">
+                <h5 class="card-title">Our Tools</h5>
+                <ul class="list-group">
+                    <a href="{% url 'stringConverter' %}"><li class="list-group-item">String Converter</li></a>
+                    <a href="{% url 'numberConverter' %}"><li class="list-group-item">Number Converter</li></a>
+                    <a href="{% url 'tempConverter' %}"><li class="list-group-item">Temprature Converter</li></a>
+                    
+                  </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

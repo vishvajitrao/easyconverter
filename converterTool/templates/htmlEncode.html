@@ -1,0 +1,55 @@
+
+{% extends 'base.html' %}
+{% block title %} Best HTML Encode tool to Encode HTML {% endblock %}
+{% block menu %}{% include 'menu.html' %} {% endblock %}
+{% block footer %}{% include 'footer.html' %} {% endblock %}
+{% block body %}
+<div class="container-fluid mt-5">
+    <div class="col-xl-12 text-center">
+        <a href="{% url 'Index2' %}" class="font-weight-bold text-center">Home</a> <i
+            class="fas fa-arrow-circle-right"></i><a href="{% url 'stringConverter' %}"
+            class="font-weight-bold"> All String Tools </a><i class="fas fa-arrow-circle-right"></i> 
+        <p class="font-weight-bold d-inline">Best HTML Encode tool to Encode HTML</p>
+
+    </div>
+    <hr>
+</div>
+<div class="container-fluid mt-5">
+  
+    <div class="row">
+        <div class="col-xl-12 text-center">
+            <h1 class="text-center">Best HTML Encode tool to Encode HTML</h1>
+            <p class="text-center">Best HTML Encode tool to Encode HTML Encoded strings,url.</p>
+        </div>
+        <div class="col-xl-8 offset-xl-2">
+            <div class="form-group m-3">
+                <label for="exampleFormControlTextarea1" class="font-weight-bold">Write HTML Here.</label>
+                <textarea class="form-control shadow-none border border-dark" id="exampleFormControlTextarea1" rows="8" name="wordType" placeholder="Write HTML Here."  spellcheck="false"></textarea>
+                <div class="form-group form-check mt-2">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Encode single/double quotes  </label>
+                  </div>
+              </div>
+        </div>
+   <div class="col-xl-12">
+    <center>
+        <button id="btn" class="btn btn-success shadow-none" onclick="Encode()">Encode</button>
+        
+        <button id="clear" class="btn btn-danger shadow-none">Clear</button>
+        <button id="clear" class="btn btn-dark shadow-none" onclick="Reload()">Refresh</button>
+        <button id="btn" class="btn btn-info shadow-none" data-clipboard-target="#results">Copy To Clipboard</button>
+    </center>
+    
+    <div class="col-xl-8 offset-xl-2 mt-2">
+        
+        <textarea class="form-control shadow-none border border-dark mb-5" id="results" rows="8" name="wordType" placeholder="Output" spellcheck="false"></textarea>
+        
+    </div>
+   </div>
+
+        
+
+    </div>
+</div>
+
+{% endblock %}

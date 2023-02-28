@@ -1,0 +1,80 @@
+
+
+{% extends 'base.html' %}
+{% block title %}String to Hexadecimal Online Converter - Easy Converter{% endblock %}
+{% block menu %}{% include 'menu.html' %} {% endblock %}
+{% block footer %}{% include 'footer.html' %} {% endblock %}
+{% block seo %}
+<meta name="title" content="String to Hexadecimal Online Converter - Easy Converter">
+<meta name="description" content="Our string to hexadecimal online converter tool allow you to convert your string to hexadecimal value.
+<meta name="keywords" content="Easy Converter, string to hexadecimal online converter, free online string to hexadecimal converter
+<meta name="robots" content="index, follow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="English">
+{% endblock %}
+{% block body %}
+<div class="container-fluid mt-5">
+    <div class="col-xl-12 text-center">
+        <a href="{% url 'Index2' %}" class="font-weight-bold text-center">Home</a> <i
+            class="fas fa-arrow-circle-right"></i><a href="{% url 'stringConverter' %}"
+            class="font-weight-bold"> All String Tools </a><i class="fas fa-arrow-circle-right"></i> 
+        <p class="font-weight-bold d-inline">String to Hexadecimal Online Converter Tool</p>
+
+    </div>
+    <hr>
+</div>
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col-xl-12 text-center">
+            <h1 class="text-center">String to Hexadecimal Online Converter Tool</h1>
+            <p class="text-center">This Tool Will Help you to convert String string to Hexadecimal.</p>
+        </div>
+        <div class="col-xl-8 offset-xl-2">
+            <div class="form-group m-3">
+                <label for="exampleFormControlTextarea1" class="font-weight-bold">Write String Here.</label>
+                <textarea class="form-control shadow-none border border-dark" id="exampleFormControlTextarea1" rows="8" name="wordType" placeholder="Write String Here"  spellcheck="false"></textarea>
+               
+              </div>
+        </div>
+   <div class="col-xl-12">
+    <center>
+        <button id="btn" class="btn btn-success shadow-none" onclick="stringtoHex()">Convert</button>
+        
+        <button id="clear" class="btn btn-danger shadow-none">Clear</button>
+        <button id="clear" class="btn btn-dark shadow-none" onclick="Reload()">Refresh</button>
+        <button id="btn" class="btn btn-info shadow-none" data-clipboard-target="#results">Copy To Clipboard</button>
+    </center>
+    
+    <div class="col-xl-8 offset-xl-2 mt-2">
+        <label for="exampleFormControlTextarea1" class="font-weight-bold">The encoded string:-</label>
+        <textarea class="form-control shadow-none border border-dark mb-5" id="results" rows="5" name="wordType" placeholder="Output" spellcheck="false"></textarea>
+        <div class="content">
+            <h2>What is Hexadecimal Number?</h2>
+            <p><b>Ans:- </b>The hexadecimal is the name of the numbering system with base-16.The hexadecimal is pronounced sometimes with 'hex' name.Base 16 means, there are only 16 possible values or digits available.Values are 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F where A, B, C, D, E, F are the single bit representation of 10, 11, 12, 13, 14 and 15.The hexadecimal values represent the only using h prefix.</b>
+                .</p><hr>
+                <h2>What is string to hexadecimal online converter?</h2>
+                <p><b>Ans:-</b> Our string to hexadecimal online converter tool, allow you to convert your string to hexadecimal.</p>
+            <p>You can see following example for better understanding.</p>
+                <b>Example:</b><br>
+            
+            <p>String value is:-  <i class="fas fa-arrow-circle-right"></i> Easy Converter </p>
+			<p>Hexadecimal value is:-  <i class="fas fa-arrow-circle-right"></i> 74 6f 70 20 6f 6e 6c 69 6e 65 20 63 6f 6e 76 65 72 74 65 72 </p>
+            <hr>
+            
+            <h2>Are this tool is free?</h2>
+            <p><b>Ans:- </b><b>Yes</b>, Our online lower case to upper case converter is completely free. You don't need to pay for using this.</p>
+        </div>
+    </div>
+   </div>
+
+        
+
+    </div>
+</div>
+
+
+
+
+
+
+{% endblock %}

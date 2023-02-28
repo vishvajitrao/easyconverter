@@ -1,0 +1,48 @@
+ 
+{% extends 'base.html' %}
+{% block title %} Binary To Hexadecimal Online Converter Tool - Online Converter {% endblock %}
+{% block menu %}{% include 'menu.html' %} {% endblock %}
+{% block footer %}{% include 'footer.html' %} {% endblock %}
+{% block body %}
+<div class="container-fluid mt-5">
+    <div class="col-xl-12 text-center">
+        <a href="{% url 'Index2' %}" class="font-weight-bold text-center">Home</a> <i
+            class="fas fa-arrow-circle-right"></i><a href="{% url 'numberConverter' %}"
+            class="font-weight-bold"> All Numbers Tools </a><i class="fas fa-arrow-circle-right"></i> 
+        <p class="font-weight-bold d-inline">Binary To Hexadecimal Online Converter Tool</p>
+
+    </div>
+    <hr>
+</div>
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col-xl-12 text-center">
+            <h1 class="text-center">Binary To Hexadecimal Converter Tool</h1>
+            <p class="text-center">.</p>
+        </div>
+        <div class="col-xl-6 col-md-6">
+            <div class="form-group m-3">
+                <label for="exampleFormControlTextarea1" class="font-weight-bold">Type Your Binary Here.</label>
+                <input class="form-control shadow-none border border-dark" id="exampleFormControlTextarea1" rows="2"
+                    name="wordType" placeholder="Binary Value Here">
+            </div>
+
+
+            <center>
+                <button id="btn" class="btn btn-success shadow-none mb-5" onclick="bintoHex()">Convert into
+                    Hexadecimal</button>
+                
+                <button id="clear" class="btn btn-danger shadow-none mb-5">Clear</button>
+            </center>
+            <strong class="text-center" id="result"></strong>
+        </div>
+        <div class="col-xl-6 col-md-6">
+            <p class="alert alert-success">Advertisement</p>
+        </div>
+
+
+
+    </div>
+</div>
+
+{% endblock %}

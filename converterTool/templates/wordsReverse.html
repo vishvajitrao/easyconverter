@@ -1,0 +1,57 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Best Words Reverse Online Tool{% endblock %}
+{% block menu %}{% include 'menu.html' %} {% endblock %}
+{% block footer %}{% include 'footer.html' %} {% endblock %}
+{% block body %} 
+<div class="container-fluid mt-5">
+    <div class="col-xl-12 text-center">
+        <a href="{% url 'Index2' %}" class="font-weight-bold text-center">Home</a> <i
+            class="fas fa-arrow-circle-right"></i><a href="{% url 'stringConverter' %}"
+            class="font-weight-bold"> All String Tools </a><i class="fas fa-arrow-circle-right"></i> 
+        <p class="font-weight-bold d-inline">Best Words Reverse Online Tool</p>
+
+    </div>
+    <hr>
+</div>
+<div class="container-fluid mt-5">
+    <div class="row">
+      
+        <div class="col-xl-12 text-center">
+            <h1 class="text-center">Best Words Reverse Online Tool</h1>
+            <p class="text-center">If you have bulk string, Then this tool will help you to reverse whole Words.</p>
+        </div>
+
+        <div class="col-xl-8 mx-auto">
+
+            <div class="form-group m-3">
+                <label for="exampleFormControlTextarea1" class="font-weight-bold">Type Your string in Text
+                    Area</label>
+                <textarea class="form-control shadow-none border border-dark" id="exampleFormControlTextarea1" rows="10"
+                    name="wordType" placeholder="Paste your string here to reverse"></textarea>
+            </div>
+        </div>
+
+ 
+
+        <div class="col-xl-12">
+            <center>
+                <button id="btn" class="btn btn-success shadow-none mb-5" onclick="wordReverse()">Reverse Words</button>
+                <button id="clear" class="btn btn-danger shadow-none mb-5" onclick="Clear()">Clear</button>
+                <button id="btn" data-clipboard-target="#exampleFormControlTextarea1" class="btn btn-info shadow-none mb-5" onclick="hello()">Copy To Clipboard</button>
+            </center>
+
+        </div>
+
+        
+
+
+    </div>
+</div>
+
+
+
+
+
+{% endblock %}

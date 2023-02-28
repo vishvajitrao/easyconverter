@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% block title %} Online Number Converter Tool - Easy Converter {% endblock %}
+{% block menu %}{% include 'menu.html' %} {% endblock %}
+{% block footer %}{% include 'footer.html' %} {% endblock %}
+{% load static %}
+{% block seo %}
+<meta name="description" content="{{data.description}}">
+<meta name="keywords" content="{{data.keywords}}">
+
+{% endblock %}
+{% block body %}
+
+<div class="container mt-5">
+    <div class="col-xl-12 text-center">
+        <a href="{% url 'Index2' %}" class="font-weight-bold text-center">Home</a> <i
+            class="fas fa-arrow-circle-right"></i>
+        <p class="font-weight-bold d-inline">Online Number Converter Tool </p>
+        
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-xl-12 text-center m2-5">
+            <h3 class="">Online Number Converter Tool</h3>
+            <p class="text-center">All the number converter tools on one place.</p>
+        </div>
+    </div>
+</div>
+<div class="container mt-5">
+    <div class="row">
+
+ 
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'bintoDec' %}">
+                <p class="border border-dark p-3 rounded">Binary to Decimal</p>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'bintoOct' %}">
+                <p class="border border-dark p-3 rounded">Binary to Octal</p>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'bintoHex' %}">
+                <p class="border border-dark p-3 rounded">Binary to Hexadecimal</p>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'octtoBin' %}">
+                <p class="border border-dark p-3 rounded">Octal to Binary</p>
+            </a>
+        </div>
+
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'octtoDec' %}">
+                <p class="border border-dark p-3 rounded">Octal to Decimal</p>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'octtoHex' %}">
+                <p class="border border-dark p-3 rounded">Octal to Hexadecimal</p>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'dectoBin' %}">
+                <p class="border border-dark p-3 rounded">Decimal to Binary</p>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'dectoHex' %}">
+                <p class="border border-dark p-3 rounded">Decimal to Hexadecimal</p>
+            </a>
+        </div>
+
+
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'dectoOct' %}">
+                <p class="border border-dark p-3 rounded">Decimal to Octal</p>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'hextoBin' %}">
+                <p class="border border-dark p-3 rounded">Hexadecimal to Binary</p>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'hextoOct' %}">
+                <p class="border border-dark p-3 rounded">Hexadecimal to Octal</p>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 p-3 text-center">
+            <a href="{% url 'hextoDec' %}">
+                <p class="border border-dark p-3 rounded">Hexadecimal to Decimal</p>
+            </a>
+        </div>
+
+
+
+
+
+    </div>
+</div>
+
+
+
+
+
+
+{% endblock %}

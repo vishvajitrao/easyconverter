@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %} Best Online Tool For CSS Formatting. {% endblock %}
+{% block menu %}{% include 'menu.html' %} {% endblock %}
+{% block footer %}{% include 'footer.html' %} {% endblock %}
+{% block body %}
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col-xl-12 text-center">
+            <h4 class="text-center">Best Online Tool For CSS Formatting.</h4>
+            <p class="text-center">Best Online Tool For CSS Formatting.</p>
+        </div>
+        <div class="col-xl-8 offset-xl-2">
+            <div class="form-group m-3">
+                
+                <textarea class="form-control shadow-none border border-dark" id="exampleFormControlTextarea1" rows="15" placeholder="Write or Paste CSS Document Here"
+                    name="wordType" placeholder="Write or Paste CSS Document Here" spellcheck="false"></textarea>
+
+            </div>
+            
+        </div>
+        <div class="col-xl-12 mb-5">
+            <center>
+                <button id="btn" class="btn btn-success shadow-none" onclick="cssFormat()">Process</button>
+                <button id="clear" class="btn btn-danger shadow-none">Clear</button>
+                <button id="clear" class="btn btn-info shadow-none" data-clipboard-target="#exampleFormControlTextarea1">Copy To Clipboard</button>
+                
+                <button id="clear" class="btn btn-dark shadow-none" onclick="Reload()">Refresh</button>
+            </center>
+
+
+        </div>
+
+
+
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,67 @@
+
+
+{% extends 'base.html' %}
+{% block title %} Online Title Case Converter - Easy Converter  {% endblock %}
+{% block menu %}{% include 'menu.html' %} {% endblock %}
+{% block footer %}{% include 'footer.html' %} {% endblock %}
+{% block seo %}
+<meta name="title" content="Online Title Case Converter - Easy Converter">
+<meta name="description" content="Our online title case converter tool allow you to convert each character of words in upper case.">
+<meta name="keywords" content="Easy Converter, online title case converter, free title case converter">
+<meta name="robots" content="index, follow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="English">
+{% endblock %}
+{% block body %}
+<div class="container-fluid mt-5">
+    <div class="col-xl-12 text-center">
+        <a href="{% url 'Index2' %}" class="font-weight-bold text-center">Home</a> <i
+            class="fas fa-arrow-circle-right"></i><a href="{% url 'stringConverter' %}"
+            class="font-weight-bold"> All String Tools </a><i class="fas fa-arrow-circle-right"></i> 
+        <p class="font-weight-bold d-inline">Online Title Case Converter</p>
+
+    </div>
+    <hr>
+</div>
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col-xl-12 text-center">
+            <h1 class="text-center">Online Title Case Converter</h1>
+            <p class="text-center">If you have bulk string, Then this tool will help you to convert title case.</p>
+        </div>
+        <div class="col-xl-8 offset-xl-2 col-md-8 offset-md-2">
+            <div class="form-group m-3">
+                <label for="exampleFormControlTextarea1" class="font-weight-bold">Type Your Words in Text Area</label>
+                <textarea class="form-control shadow-none border border-dark" id="exampleFormControlTextarea1" rows="8" name="wordType" placeholder="Type/Paste your words here"></textarea>
+              </div>
+              <div class="content">
+                <h2>What is title case?</h2>
+                <p><b>Ans:- </b>In title case, all the major words are in capitalize, while minor words are in lowercased.</p>
+                <hr>
+                <h2>What is title case converter tool?</h2>
+                <p><b>Ans:- </b>Title case converter tool is a free online tool that let you to convert all your words into title case.
+                    .</p>
+                <hr>
+                
+                <h2>Are this tool is free?</h2>
+                <p><b>Ans:- </b><b>Yes</b>, Our online lower case to upper case converter is completely free. You don't need to pay for using this.</p>
+            </div>
+        </div>
+   <div class="col-xl-12">
+    <center>
+        <button id="btn" class="btn btn-success shadow-none mb-5" onclick="titleCase()">Convert Title Case</button>
+        <button id="btn" class="btn btn-info shadow-none mb-5" data-clipboard-target="#exampleFormControlTextarea1">Copy To Clipboard</button>
+        <button id="clear" class="btn btn-danger shadow-none mb-5" onclick="Clear()">Clear</button>
+    </center>
+   </div>
+
+        
+
+    </div>
+</div>
+
+
+
+
+
+{% endblock %}

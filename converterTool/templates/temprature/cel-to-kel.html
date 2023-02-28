@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% block title %} Best tool to convert Celsius to Kelvin. {% endblock %}
+{% block menu %}{% include 'menu.html' %} {% endblock %}
+{% block footer %}{% include 'footer.html' %} {% endblock %}
+{% block body %}
+
+<div class="container-fluid mt-5">
+    <div class="col-xl-12 text-center">
+        <a href="{% url 'Index2' %}" class="font-weight-bold text-center">Home</a> <i
+            class="fas fa-arrow-circle-right"></i><a href="{% url 'tempConverter' %}" class="font-weight-bold">Temprature Converter </a><i
+            class="fas fa-arrow-circle-right"></i>
+        <p class="font-weight-bold d-inline">Celsius to Kelvin Converter Tool </p>
+        
+    </div>
+    <hr>
+
+</div>
+
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col-xl-12 text-center">
+            <h1 class="text-center">Celsius to Kelvin Conversion.</h1>
+            <p class="text-center">This Tool Will Help you to convert Celsius to Kelvin.</p>
+        </div>
+        {% block left_adsense %} {% include 'left_adsense.html' %} {% endblock left_adsense %}
+        <div class="col-xl-4">
+            <div class="form-group m-3">
+                <label for="exampleFormControlTextarea1" class="font-weight-bold">Write Degree in Celsius (°C).</label>
+                <input class="form-control shadow-none border border-dark" id="data"
+                    placeholder="Write Degree in Celsius" spellcheck="false"></input>
+
+            </div>
+
+            
+            <center class="mb-5">
+                <button id="btn" class="btn btn-success shadow-none clickNow">Convert</button>
+
+                <button id="clear" class="btn btn-danger shadow-none">Clear</button>
+                <button id="clear" class="btn btn-success shadow-none" onclick="Reload()">Refresh</button>
+                <button id="btn" class="btn btn-info shadow-none" data-clipboard-target="#results">Copy To
+                    Clipboard</button>
+            </center>
+            <textarea class="form-control shadow-none border border-dark mb-2" id="results" rows="3" name="wordType"
+            placeholder="Output in Fahrenheit (°F)" spellcheck="false" style="resize:none;"></textarea>
+
+            <a href="#" class="btn btn-dark shadow-none my-3" title="Fahrenheit To Celsius Converter">Kelvin To
+                Celsius Converter ></a>
+
+        </div>
+
+        {% block right_adsense %} {% include 'right_adsense.html' %} {% endblock right_adsense %}
+        <div class="col-xl-12">
+            <div class="col-xl-6 offset-xl-3 mt-4">
+               
+                <div class="my-5 rounded p-2" style="border: 2px solid #343a40;">
+                    <h4 class="text-center">Formula</h4>
+                    <h2 class="text-center" style="font-size: 20px;">How to convert Celsius To Kelvin</h2>
+                    <p>0 degree Celsius is equal to the 273.15 kelvin.</p>
+                    <h2>0 °C = 273.15K</h2>
+                    <p>The temperature T in degrees Kelvin (K) is equal to the temperature T in degrees Celsius plus 273.15:</p>
+                    <h2>T<sub>(K) </sub>= T<sub>(°C)</sub> + 273.15K</h2>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+</div>
+</div>
+
+{% endblock %}
