@@ -40,8 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'converter',
-    'froala_editor',
-    'import_export',
+    # 'froala_editor',
+    # 'import_export',
     'django.contrib.sitemaps',
     'rest_framework'
 ]

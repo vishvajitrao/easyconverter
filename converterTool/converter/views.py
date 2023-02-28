@@ -4,10 +4,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from urllib.parse import quote, unquote
-
 from django.views.generic.base import View
-# from html5print import HTMLBeautifier, CSSBeautifier#, JSBeautifier
-# import jsbeautifier
 from converter.models import *
 from decimal import *
 from django.views import generic
@@ -16,7 +13,6 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 
 # Create your views here.
-
 def stringConverter(request):
     return render(request, 'stringConverter.html')
 
@@ -338,44 +334,6 @@ def Password(request):
     return render(request, 'password.html')
 
 
-# json formatter
-# def jsonFormat(request):
-#     return render(request, 'jsonFormat.html')
-
-
-# html formatter
-# def htmlFormat(request):
-#     return render(request, 'htmlFormat.html')
-
-
-# def htmlFormat2(request):
-#     html = request.GET['wordType']
-#     x = HTMLBeautifier.beautify(html, 4)
-#     return HttpResponse(x)
-
-
-# # css formatter
-# def cssFormat(request):
-#     return render(request, 'cssFormat.html')
-
-
-# def cssFormat2(request):
-#     css = request.GET['wordType']
-#     x = CSSBeautifier.beautify(css)
-#     return HttpResponse(x)
-
-
-# js formatter
-# def jsFormat(request):
-#     return render(request, 'jsFormat.html')
-
-
-# def jsFormat2(request):
-#     js = request.GET['wordType']
-#     x = jsbeautifier.beautify(js)
-#     return HttpResponse(x)
-
-
 # temprature Converter
 
 def celtoFah(request):
@@ -425,9 +383,6 @@ def ranktoFah(request):
 def ranktoKel(request):
     return render(request, 'temprature/rank-to-kel.html')
 
-
-def hello(x):
-    print(x)
 
 #Function to get all about single converter tool
 def converterTool(request, conType, slug):

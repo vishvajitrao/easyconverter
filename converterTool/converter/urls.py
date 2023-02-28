@@ -63,13 +63,6 @@ urlpatterns = [
     path('url-encoder', urlEncode2, name = 'urlEncode2'),
     path('url-decoder-tool', urlDecode, name = 'urlDecode'),
     path('url-decoder', urlDecode2, name = 'urlDecode2'),
-    # path('json-formatter-tool', jsonFormat, name = 'jsonFormat'),
-    # path('html-formatter-tool', htmlFormat, name = 'htmlFormat'),
-    # path('html-formatter', htmlFormat2, name = 'htmlFormat2'),
-    # path('css-formatter-tool', cssFormat, name = 'cssFormat'),
-    # path('css-formatter', cssFormat2, name = 'cssFormat2'),
-    # path('js-formatter-tool', jsFormat, name = 'jsFormat'),
-    # path('js-formatter', jsFormat2, name = 'jsFormat2'),
 
     # pages URL
     path('privacy-policy', PrivacyPolicy, name = 'PrivacyPolicy'),
@@ -95,7 +88,6 @@ urlpatterns = [
     path('online-number-converter-tools', numberConverter, name = 'numberConverter'),
     path('online-temprature-converter-tools', tempConverter, name = 'tempConverter'),
     path('blog', BlogList.as_view()),
-    path('hello/<str:x>/', hello, name = 'hello'),
     path('page/<str:slug>', Pages, name = 'Pages'),
     path('converter/<str:slug>', Converter, name = 'Converter'),
     path('<str:conType>/<str:slug>', converterTool, name = 'converterTool'),
