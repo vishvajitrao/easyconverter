@@ -34,8 +34,9 @@
 
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light custom-menu"> 
-    <a class="navbar-brand font-weight-bold mr-5 ml-2" href="/"><img src="{% static 'loader/toc-logo.png' %}" alt="Easy Converter" id="logo" class='img-responsive'>
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light custom-menu"> 
+    <a class="navbar-brand font-weight-bold mr-5 ml-2" href="/"><img src="{% static 'loader/Easy-Converter-Logo.png' %}" alt="Easy Converter" id="logo" class='img-responsive'>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,46 +49,22 @@
           <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'Converter' 'length-converter' %}">length</a>
+          <a class="nav-link" href="{% url 'stringConverter' %}">String Converters</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'Converter' 'volume-converter' %}">Volume</a>
+          <a class="nav-link" href="{% url 'numberConverter' %}">Number Converter</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'Converter' 'time-converter' %}">Time</a>
+          <a class="nav-link" href="{% url 'tempConverter' %}">Temp Converter</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'Converter' 'frequency-converter' %}">Frequency</a>
+          <a class="nav-link" href="/online-hash-generator-tools">Hash Converter</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'Converter' 'angle-converter' %}">Angle</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'Converter' 'speed-converter' %}">Speed</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'Converter' 'time-converter' %}">Time</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'Converter' 'pressure-converter' %}">Pressure</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'Converter' 'energy-converter' %}">Energy</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'Converter' 'mass-converter' %}">Mass</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'Converter' 'fuel-converter' %}">Fuel</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'Converter' 'area-converter' %}">Area</a>
-        </li>
-
       </ul>
 
     </div>
   </nav>
+</div>
 
   <main>
     {% block body %} {% block left_adsense %}{} {% endblock left_adsense %} {% block right_adsense %}{} {% endblock right_adsense %} {% endblock body %}

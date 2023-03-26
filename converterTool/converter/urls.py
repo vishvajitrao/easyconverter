@@ -1,4 +1,3 @@
-
 from django.urls import path
 from converter.views import *
 from .sitemap import StaticSitemap
@@ -87,10 +86,10 @@ urlpatterns = [
     path('online-string-converter-tools', stringConverter, name = 'stringConverter'),
     path('online-number-converter-tools', numberConverter, name = 'numberConverter'),
     path('online-temprature-converter-tools', tempConverter, name = 'tempConverter'),
-    path('blog', BlogList.as_view()),
+    # path('blog', BlogList.as_view()),
     path('page/<str:slug>', Pages, name = 'Pages'),
-    path('converter/<str:slug>', Converter, name = 'Converter'),
-    path('<str:conType>/<str:slug>', converterTool, name = 'converterTool'),
+    # path('converter/<str:slug>', Converter, name = 'Converter'),
+    # path('<str:conType>/<str:slug>', converterTool, name = 'converterTool'),
 
     #hash value urls
     path('online-hash-generator-tools', all_hash_generator_page, name = 'all_hash_generator_page'),

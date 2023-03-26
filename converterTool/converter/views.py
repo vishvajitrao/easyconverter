@@ -384,16 +384,16 @@ def ranktoKel(request):
     return render(request, 'temprature/rank-to-kel.html')
 
 
-#Function to get all about single converter tool
-def converterTool(request, conType, slug):
-    sidebar = Tools.objects.filter(url__startswith=slug[:3])
-    data = Tools.objects.get(url=slug)
-    context = {
-        'data': data,
-        'sidebar': sidebar,
-        'values': list(range(0,11)),
-    }
-    return render(request, 'singleconpage.html', context=context)
+# #Function to get all about single converter tool
+# def converterTool(request, conType, slug):
+#     sidebar = Tools.objects.filter(url__startswith=slug[:3])
+#     data = Tools.objects.get(url=slug)
+#     context = {
+#         'data': data,
+#         'sidebar': sidebar,
+#         'values': list(range(0,11)),
+#     }
+#     return render(request, 'singleconpage.html', context=context)
 
 
 def Pages(request, slug):
@@ -401,9 +401,9 @@ def Pages(request, slug):
     return render(request, 'page.html', {'data': data})
 
 
-def Converter(request, slug):
-    data = Tools.objects.filter(category__url=slug)
-    return render(request, 'single-type-converter.html', {'data': data})
+# def Converter(request, slug):
+#     data = Tools.objects.filter(category__url=slug)
+#     return render(request, 'single-type-converter.html', {'data': data})
 
 
 def Adstxt(request):
@@ -412,12 +412,11 @@ def Adstxt(request):
 
 
 #Online converter's blog generic class
-
-class BlogList(generic.ListView):
-    queryset = Post.objects.all()
-    template_name = 'blog.html'
-    paginate_by = 5
-    model = Post
+# class BlogList(generic.ListView):
+#     queryset = Post.objects.all()
+#     template_name = 'blog.html'
+#     paginate_by = 5
+#     model = Post
 
 
 
