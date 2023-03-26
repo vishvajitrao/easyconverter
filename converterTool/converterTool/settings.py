@@ -26,7 +26,7 @@ SECRET_KEY = 'ph^8klxy$wnk4n2ql5schpe4&atl=rcv#mi)5d=6d0ksn0-21p'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 PREPEND_WWW = False
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['easyconverter.info', 'www.easyconverter.info']
 
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
